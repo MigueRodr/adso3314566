@@ -4,14 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADSO 3314566</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
         body {
             background: linear-gradient(rgb(6, 7, 8), rgb(51, 0, 80));
+            font-family: "Inder", sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             color: white; /* Cambia el color de TODA la fuente */
-            font-family: Arial, sans-serif; /* Cambia la fuente */
+        
         }
 
         h1 {
@@ -32,13 +34,62 @@
             text-align: center;
             font-size: 1.4rem;
         }
+        menu {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            a:link,a:visited {
+            background-color: rgb(82, 19, 184);
+            color: rgb(241, 239, 239);
+            border-radius: 12rem;
+            padding: 0,4rem;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            span {
+                background-color: rgb(91, 10, 145);
+                color: #faf8f5;
+                border-radius: 50%;
+                font-size: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                width: 80px;
+
+
+            }  
+            }
     </style>
 </head>
 <body>
     <main>
+        <menu>
         <h1>ADSO 3314566</h1>
         <img src="Fotoia.png">
         <h4>Miguel Angel Rodriguez Hernandez</h4>
-    </main>
+    <menu>
+            <a href="01-emmet">
+                <span>01</span>
+                <aside>
+                    <h4>Emmet</h4>
+                    <small>Work Flow - Markup & Styling</small>
+                </aside>
+            </a>
+            <a href="02-html">
+                <span>02</span>
+                <aside>
+                    <h4>Html</h4>
+                    <small>Structure - Hypertext Markup Languague</small>
+                </aside>
+            </a>
+            <a href="03-css">
+                <span>03</span>
+                <aside>
+                    <h4>Css</h4>
+                    <small>Look & Fall - Cascading Style Sheets</small>
+                </aside>
+            </a>
+        </menu>
 </body>
 </html>
