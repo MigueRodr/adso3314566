@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01- Emmet | Neo-Tokyo Edition</title>
+    <title>01- Emmet | Guía Completa</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap');
 
@@ -62,7 +62,7 @@
             align-items: center;
             gap: 30px;
             width: 90%;
-            max-width: 600px;
+            max-width: 1200px;
             position: relative;
         }
 
@@ -79,21 +79,40 @@
                 8px 8px 20px rgba(0, 255, 65, 0.3);
             line-height: 1;
             transform: skew(-5deg);
+            text-align: center;
+            width: 100%;
         }
 
-        h4 {
-            font-size: 1.2rem;
-            margin: -10px 0 10px 0;
+        .description {
+            font-size: 1.1rem;
             color: #a0f0a0;
-            font-weight: 300;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            margin: -10px 0 20px 0;
+            max-width: 800px;
             background: rgba(0, 255, 65, 0.1);
-            padding: 8px 20px;
+            padding: 20px 30px;
             border-radius: 30px;
-            display: inline-block;
             backdrop-filter: blur(5px);
             border: 1px solid rgba(0, 255, 65, 0.3);
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            width: 100%;
+        }
+
+        .description p {
+            margin: 8px 0;
+            text-align: center;
+        }
+
+        .conceptos-basicos {
+            font-size: 2rem;
+            color: #00ff41;
+            margin: 20px 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
         }
 
         .logo-emmet {
@@ -102,30 +121,37 @@
             filter: drop-shadow(0 0 20px rgba(0, 255, 65, 0.5));
             background: linear-gradient(145deg, #1a2a1a, #0a150a);
             padding: 10px;
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             transform: rotate(0deg);
             transition: transform 0.3s ease;
-            margin-bottom: 10px;
+            margin: 0 auto 10px auto;
+            display: block;
         }
 
         .logo-emmet:hover {
             transform: rotate(5deg) scale(1.05);
         }
 
-        /* --- NUEVO ESTILO DE TARJETA (TERMINAL) --- */
+        /* Grid de tarjetas */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
         .card {
             background: #0f140f;
             border: 2px solid #1f3a1f;
             border-radius: 8px;
             padding: 0;
             width: 100%;
-            text-align: left;
+            text-align: center;
             box-shadow: 
-                10px 10px 0 #0a1a0a,
+                8px 8px 0 #0a1a0a,
                 0 0 0 2px #00ff41 inset,
                 0 0 20px rgba(0, 255, 65, 0.2);
-            margin-bottom: 20px;
             transition: all 0.2s ease;
             overflow: hidden;
         }
@@ -133,99 +159,116 @@
         .card:hover {
             transform: translate(-5px, -5px);
             box-shadow: 
-                15px 15px 0 #0a1a0a,
+                12px 12px 0 #0a1a0a,
                 0 0 0 2px #00ff41 inset,
                 0 0 30px rgba(0, 255, 65, 0.4);
         }
 
         .card h2 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             background: #1a2a1a;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border-bottom: 2px solid #2a4a2a;
             font-family: 'Inter', sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             color: #00ff41;
             text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .card h2::before {
-            content: "⚡";
-            color: #00ff41;
-            font-size: 1.8rem;
+            letter-spacing: 1px;
+            text-align: center;
         }
 
         .card-content {
-            padding: 20px 25px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .card p {
-            margin: 5px 0 15px 0;
+        .card .descripcion {
+            margin: 0 0 15px 0;
             font-weight: 300;
             color: #b0d0b0;
-            font-size: 1rem;
+            font-size: 0.9rem;
             background: rgba(0, 255, 65, 0.05);
-            padding: 10px 15px;
+            padding: 12px;
             border-left: 4px solid #00ff41;
+            border-right: 4px solid #00ff41;
             font-family: 'Space Mono', monospace;
+            line-height: 1.5;
+            text-align: center;
+            width: 100%;
+            border-radius: 4px;
         }
 
         .card .example-label {
             color: #00ff41;
             font-weight: 700;
-            margin: 20px 0 8px 0;
+            margin: 15px 0 8px 0;
             display: block;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
             border-bottom: 1px dashed #2a4a2a;
-            padding-bottom: 5px;
+            padding-bottom: 4px;
+            text-align: center;
+            width: 100%;
         }
 
-        .card .example-label:first-of-type {
-            margin-top: 0;
-        }
-
-        .card .result-box {
+        .card .example-box {
             background-color: #0a120a;
             border: 2px solid #1f3a1f;
             border-radius: 6px;
             padding: 15px;
-            margin: 10px 0 5px 0;
+            margin: 8px 0;
             color: #7fff7f;
             font-size: 0.9rem;
             font-family: 'Space Mono', monospace;
             box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
             position: relative;
+            white-space: pre-wrap;
+            word-break: break-all;
+            text-align: center;
+            width: 100%;
         }
 
-        .card .result-box::before {
+        .card .example-box::before {
             content: "❯_";
             position: absolute;
-            top: -10px;
-            left: 10px;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
             background: #0f140f;
-            padding: 0 8px;
+            padding: 0 12px;
             color: #00ff41;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             border-left: 2px solid #00ff41;
             border-right: 2px solid #00ff41;
+            white-space: nowrap;
         }
 
-        /* Barra de estado en la tarjeta */
+        .resultado-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            align-items: center;
+        }
+
         .card-footer {
             background: #1a2a1a;
-            padding: 10px 25px;
+            padding: 10px 20px;
             border-top: 2px solid #2a4a2a;
             font-size: 0.8rem;
             color: #7fa07f;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card-footer span {
+            text-align: center;
         }
 
         .card-footer span:last-child {
@@ -233,7 +276,6 @@
             font-weight: 700;
         }
 
-        /* Botón de volver - estilo glitch */
         .bt-home {
             position: fixed;
             top: 30px;
@@ -269,7 +311,6 @@
             transition: fill 0.3s ease;
         }
 
-        /* Línea decorativa superior */
         .top-bar {
             position: fixed;
             top: 0;
@@ -279,6 +320,22 @@
             background: linear-gradient(90deg, transparent, #00ff41, #00ff41, transparent);
             z-index: 20;
             box-shadow: 0 0 20px #00ff41;
+        }
+
+        /* Estilos específicos para los números de las tarjetas */
+        .card h2::before {
+            content: "⚡";
+            color: #00ff41;
+            font-size: 1.5rem;
+            margin-right: 8px;
+        }
+
+        /* Ajuste para la primera tarjeta que tenía errores en el ejemplo */
+        .card .example-box code {
+            background: rgba(0, 255, 65, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #00ff41;
         }
     </style>
 </head>
@@ -293,188 +350,403 @@
     </a>
 
     <main>
-        <h1>01- EMMET</h1>
-        <h4>Workflow - Markup & Styling</h4>
+        <h1>EMMET</h1>
+        <div class="description">
+        <p> Work Flow - Markup & Styling</p>
+            <p style="color: #00ff41; margin-top: 15px;">Miguel Angel Rodriguez Hernandez - Ingeniero Informatico</p>
+        </div>
+        
+        <h2 class="conceptos-basicos">Conceptos Básicos</h2>
+        
         <img src="./emmet-svgrepo-com.svg" width="200" height="200" alt="Emmet Logo" class="logo-emmet">
 
-        <div class="card">
-            <h2>Nesting</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li>a</p>
-
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+        <div class="cards-grid">
+            <!-- 01-Child (Anidar Elementos) -->
+            <div class="card">
+                <h2>01-CHILD (ANIDAR ELEMENTOS)</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates child elements (nesting).</strong><br>
+                        Crea elementos hijos (anidación).
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">ul>li>a</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>parent > child</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>parent > child</span>
-            </div>
-        </div>
 
-        <div class="card">
-            <h2>Multiplication</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
-
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 02-Sibling (Elementos Hermanos) -->
+            <div class="card">
+                <h2>02-SIBLING (ELEMENTOS HERMANOS +)</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates sibling elements.</strong><br>
+                        Crea elementos hermanos.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">section+header+nav</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;section&gt;&lt;/section&gt;<br>
+                        &lt;header&gt;&lt;/header&gt;<br>
+                        &lt;nav&gt;&lt;/nav&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>element + element</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
 
-           <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
-
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 03-Multiplication (Repetir Elementos) -->
+            <div class="card">
+                <h2>03-MULTIPLICATION (REPETIR ELEMENTOS)</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Repeats elements multiple times.</strong><br>
+                        Repite elementos varias veces.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">ul>li*3</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>element * number</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 04-Class -->
+            <div class="card">
+                <h2>04-CLASS</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates a class attribute.</strong><br>
+                        Crea un atributo de clase.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">div.contenedor</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">&lt;div class="contenedor"&gt;&lt;/div&gt;</div>
+                </div>
+                <div class="card-footer">
+                    <span>element.class</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 05-Classes (Múltiples Clases) -->
+            <div class="card">
+                <h2>05-CLASSES</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates multiple class attributes.</strong><br>
+                        Crea múltiples atributos de clase.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">div.clase1.clase2.clase3</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">&lt;div class="clase1 clase2 clase3"&gt;&lt;/div&gt;</div>
+                </div>
+                <div class="card-footer">
+                    <span>element.class1.class2</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 06-Id -->
+            <div class="card">
+                <h2>06-ID</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates an ID attribute.</strong><br>
+                        Crea un atributo de ID.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">nav#menu</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">&lt;nav id="menu"&gt;&lt;/nav&gt;</div>
+                </div>
+                <div class="card-footer">
+                    <span>element#id</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 07-Text (Adicionar Texto) -->
+            <div class="card">
+                <h2>07-TEXT (ADICIONAR TEXTO)</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Inserts text content.</strong><br>
+                        Inserta contenido de texto.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">div{Lorem Ipsum Dolor}</div>
+                    <div class="example-box">a{Click Aqui}</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;div&gt;Lorem Ipsum Dolor&lt;/div&gt;<br>
+                        &lt;a href=""&gt;Click Aqui&lt;/a&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>element{text}</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 08-Custom Attribute (Personalizar Atributos) -->
+            <div class="card">
+                <h2>08-CUSTOM ATTRIBUTE</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates custom attributes.</strong><br>
+                        Crea atributos personalizados.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">a[href=www.google.com]</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">&lt;a href="www.google.com"&gt;&lt;/a&gt;</div>
+                </div>
+                <div class="card-footer">
+                    <span>element[attr="value"]</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
-            </div>
-        </div>
-        <div class="card">
-            <h2> Momazos Taba</h2>
-            <div class="card-content">
-                <span class="example-label">Example</span>
-                <p>&gt; ul>li*3</p>
 
-                <span class="example-label">Result</span>
-                <div class="result-box">
-                    &lt;ul&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&lt;li&gt;&lt;/li&gt;<br>
-                    &lt;/ul&gt;
+            <!-- 09-Item Numbering (Números Consecutivos) -->
+            <div class="card">
+                <h2>09-ITEM NUMBERING</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Adds consecutive numbers.</strong><br>
+                        Añade números consecutivos.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">ul>li.num$*3</div>
+                    <div class="example-box">section>article.sec$$$*3</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num1"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num2"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num3"&gt;&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                        &lt;section&gt;<br>
+                        &nbsp;&nbsp;&lt;article class="sec001"&gt;&lt;/article&gt;<br>
+                        &nbsp;&nbsp;&lt;article class="sec002"&gt;&lt;/article&gt;<br>
+                        &nbsp;&nbsp;&lt;article class="sec003"&gt;&lt;/article&gt;<br>
+                        &lt;/section&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>$ = 1,2,3...</span>
                 </div>
             </div>
-            <div class="card-footer">
-                <span>⏎ shortcut</span>
-                <span>element * number</span>
+
+            <!-- 10-Reverse Numbering (Dirección Números Consecutivos @-) -->
+            <div class="card">
+                <h2>10-REVERSE NUMBERING @-</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Inverts numbering order.</strong><br>
+                        Invierte el orden de numeración.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">ul>li.num$@-*3</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num3"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num2"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num1"&gt;&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>$@- = 3,2,1...</span>
+                </div>
+            </div>
+
+            <!-- 11-Base Numbering (Base Números Consecutivos @n) -->
+            <div class="card">
+                <h2>11-BASE NUMBERING @n</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Defines a base number for sequences.</strong><br>
+                        Define un número base para secuencias.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">ul>li.num$@3*4</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;ul&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num3"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num4"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num5"&gt;&lt;/li&gt;<br>
+                        &nbsp;&nbsp;&lt;li class="num6"&gt;&lt;/li&gt;<br>
+                        &lt;/ul&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>$@N = N,N+1,...</span>
+                </div>
+            </div>
+
+            <!-- 12-Climb Up (Subir de Nivel) -->
+            <div class="card">
+                <h2>12-CLIMB UP ^</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Moves up one level.</strong><br>
+                        Sube un nivel.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">section>article>div^p</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;section&gt;<br>
+                        &nbsp;&nbsp;&lt;article&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;/article&gt;<br>
+                        &nbsp;&nbsp;&lt;p&gt;&lt;/p&gt;<br>
+                        &lt;/section&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>^ = up one level</span>
+                </div>
+            </div>
+
+            <!-- 13-Grouping (Agrupar Elementos) -->
+            <div class="card">
+                <h2>13-GROUPING</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Groups elements together.</strong><br>
+                        Agrupa elementos juntos.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">(header>nav)(section>article)</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;header&gt;<br>
+                        &nbsp;&nbsp;&lt;nav&gt;&lt;/nav&gt;<br>
+                        &lt;/header&gt;<br>
+                        &lt;section&gt;<br>
+                        &nbsp;&nbsp;&lt;article&gt;&lt;/article&gt;<br>
+                        &lt;/section&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>(group) for complex structures</span>
+                </div>
+            </div>
+
+            <!-- 14-Lorem (Generar Lorem Ipsum) -->
+            <div class="card">
+                <h2>14-LOREM</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Generates placeholder text.</strong><br>
+                        Genera texto de relleno.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">lorem</div>
+                    <div class="example-box">lorem20</div>
+                    <div class="example-box">lorem*5</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        Lorem ipsum dolor sit amet...<br>
+                        (Genera texto de relleno con 20 palabras)<br>
+                        (Genera 5 párrafos)
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>loremN (N = palabras)</span>
+                </div>
+            </div>
+
+            <!-- 15-HTML Documents -->
+            <div class="card">
+                <h2>15-HTML DOCUMENTS</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Creates various HTML document types.</strong><br>
+                        Crea varios tipos de documentos HTML.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">
+                        html:xs → XHTML 1.0 Strict<br>
+                        html:xt → XHTML 1.0 Transitional<br>
+                        html:4s → HTML 4.01 Strict<br>
+                        html:4t → HTML 4.01 Transitional<br>
+                        html:5 → HTML 5
+                    </div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html lang="en"&gt;<br>
+                        &nbsp;&nbsp;&lt;head&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Document&lt;/title&gt;<br>
+                        &nbsp;&nbsp;&lt;/head&gt;<br>
+                        &nbsp;&nbsp;&lt;body&gt;<br>
+                        &nbsp;&nbsp;&lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>html:5, html:xt, etc.</span>
+                </div>
+            </div>
+
+            <!-- 16-Meta Tags -->
+            <div class="card">
+                <h2>16-META TAGS</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Generates meta tags.</strong><br>
+                        Genera etiquetas meta.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">meta:vp</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
+                </div>
+                <div class="card-footer">
+                    <span>meta:vp (viewport)</span>
+                </div>
+            </div>
+
+            <!-- 17-Challenge (Bonus) -->
+            <div class="card">
+                <h2>17-CHALLENGE</h2>
+                <div class="card-content">
+                    <div class="descripcion">
+                        <strong>Generates Emmet challenges for practice.</strong><br>
+                        Genera desafíos de Emmet para práctica.
+                    </div>
+                    <span class="example-label">EJEMPLO</span>
+                    <div class="example-box">¡Practica todos los conceptos anteriores!</div>
+                    <span class="example-label">RESULTADO</span>
+                    <div class="example-box">
+                        Crea estructuras HTML complejas combinando<br>
+                        todos los operadores de Emmet aprendidos.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>¡A practicar!</span>
+                </div>
             </div>
         </div>
     </main>
