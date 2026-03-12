@@ -36,6 +36,86 @@
             z-index: 2;
         }
 
+        
+ /* Botón Volver al Inicio - Esquina Superior Izquierda */
+.home-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;  /* Cambiado a left para esquina izquierda */
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #1a2a3a, #0f1a24);
+    border: 2px solid #64ffda;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #64ffda;
+    font-family: 'Segoe UI', 'Consolas', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.home-button:hover {
+    background: linear-gradient(145deg, #1f3345, #15232f);
+    border-color: #9efff0;
+    color: #9efff0;
+    box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4);
+    transform: scale(1.05) translateX(-5px); /* Se mueve a la izquierda en hover */
+}
+
+.home-button:active {
+    transform: scale(0.98);
+}
+
+.home-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 5px rgba(100, 255, 218, 0.5));
+}
+
+.home-text {
+    font-size: 1rem;
+    font-weight: 600;
+    border-left: 2px solid rgba(100, 255, 218, 0.3);
+    padding-left: 12px;
+}
+
+/* Estilos para el main */
+main {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Tus estilos existentes para el resto de la página */
+.profile-img {
+    /* tus estilos */
+}
+
+.name {
+    /* tus estilos */
+}
+
+menu {
+    /* tus estilos */
+}
+
+/* ... resto de tus estilos ... */
+
+/* ... resto de tus estilos ... */
+
+        main {
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+        }
+    
         h1 {
             font-size: 3rem;
             font-weight: 700;
