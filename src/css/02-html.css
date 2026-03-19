@@ -46,23 +46,23 @@
     align-items: center;
     gap: 12px;
     padding: 14px 28px;
-    background: linear-gradient(145deg, #1a2a3a, #0f1a24);
-    border: 2px solid #64ffda;
+    background: linear-gradient(145deg, #da4214, #03111d93);
+    border: 2px solid #ffffff85;
     border-radius: 50px;
     text-decoration: none;
-    color: #64ffda;
+    color: #ffffff;
     font-family: 'Segoe UI', 'Consolas', monospace;
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+    box-shadow: 0 4px 15px rgba(224, 228, 227, 0.199);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     backdrop-filter: blur(5px);
 }
 
 .home-button:hover {
-    background: linear-gradient(145deg, #1f3345, #15232f);
+    background: linear-gradient(145deg, #1f334500, #2f2815c4);
     border-color: #9efff0;
     color: #9efff0;
     box-shadow: 0 6px 25px rgba(100, 255, 218, 0.4);
@@ -364,4 +364,42 @@ menu {
                 font-size: 1.2rem;
             }
         }
+    .boton-volver {
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 28px;
+        background: linear-gradient(145deg, #f56105, #130a0186);
+        border: 2px solid #ebe8e8b4;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #64ffda;
+        font-family: 'Segoe UI', 'Consolas', monospace;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgb(254, 255, 254);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+    }
+    .recuadro {
+        background: rgba(255, 255, 255, 0.315);
+        border: 1px solid rgba(173, 101, 67, 0.15);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 
+            0 8px 20px rgba(0, 0, 0, 0.3),
+            0 2px 5px rgba(255, 8, 0, 0.1);
+    }
+    .recuadro p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+
     
