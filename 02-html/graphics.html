@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-Graphics</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/12-graphics.css">
+</head>
+<body>
+    <a href="index.html" class="boton-volver">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256">
+            <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>12 - Graphics</h1>
+            <h2>Creates inline graphics with tags.</h2>
+        </header>
+
+        <div class="graphics-container">
+            <!-- SVG Graphics Section -->
+            <div class="graphics-section">
+                <h3>Scalable Vector Graphics (SVG)</h3>
+                <div class="svg-gallery">
+                    <!-- Circle -->
+                    <div class="graphic-card">
+                        <h4>Circle</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <circle cx="75" cy="75" r="60" fill="#4a90e2" stroke="#2c5aa0" stroke-width="3" />
+                            <text x="75" y="80" text-anchor="middle" fill="white" font-size="14" font-weight="bold">SVG</text>
+                        </svg>
+                    </div>
+
+                    <!-- Rectangle -->
+                    <div class="graphic-card">
+                        <h4>Rectangle</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <rect x="25" y="25" width="100" height="100" rx="10" fill="#e74c3c" stroke="#c0392b" stroke-width="3" />
+                            <text x="75" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">RECT</text>
+                        </svg>
+                    </div>
+
+                    <!-- Line -->
+                    <div class="graphic-card">
+                        <h4>Line</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <line x1="20" y1="130" x2="130" y2="20" stroke="#2ecc71" stroke-width="4" stroke-linecap="round" />
+                            <line x1="20" y1="20" x2="130" y2="130" stroke="#e67e22" stroke-width="4" stroke-linecap="round" />
+                            <circle cx="75" cy="75" r="15" fill="#3498db" />
+                        </svg>
+                    </div>
+
+                    <!-- Polygon (Star) -->
+                    <div class="graphic-card">
+                        <h4>Star Polygon</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <polygon points="75,20 90,55 130,55 98,80 110,115 75,95 40,115 52,80 20,55 60,55" 
+                                     fill="#f1c40f" stroke="#d4ac0d" stroke-width="2" />
+                        </svg>
+                    </div>
+
+                    <!-- Gradient Circle -->
+                    <div class="graphic-card">
+                        <h4>Gradient</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="75" cy="75" r="60" fill="url(#grad1)" />
+                            <text x="75" y="80" text-anchor="middle" fill="white" font-size="12" font-weight="bold">GRADIENT</text>
+                        </svg>
+                    </div>
+
+                    <!-- Path (Heart) -->
+                    <div class="graphic-card">
+                        <h4>Path - Heart</h4>
+                        <svg width="150" height="150" viewBox="0 0 150 150">
+                            <path d="M75,130 C75,130 20,90 20,55 C20,35 35,20 55,20 C65,20 72,28 75,35 C78,28 85,20 95,20 C115,20 130,35 130,55 C130,90 75,130 75,130Z" 
+                                  fill="#e74c3c" stroke="#c0392b" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Graphics Section -->
+            <div class="graphics-section">
+                <h3>Canvas Graphics (HTML5 Canvas)</h3>
+                <div class="canvas-gallery">
+                    <!-- Animated Clock -->
+                    <div class="graphic-card">
+                        <h4>Clock Canvas</h4>
+                        <canvas id="clockCanvas" width="200" height="200" style="border: 2px solid #ddd; border-radius: 50%;"></canvas>
+                    </div>
+
+                    <!-- Colorful Bars -->
+                    <div class="graphic-card">
+                        <h4>Bar Chart</h4>
+                        <canvas id="barCanvas" width="300" height="200" style="border: 1px solid #ccc; background: #f9f9f9;"></canvas>
+                    </div>
+
+                    <!-- Smiley Face -->
+                    <div class="graphic-card">
+                        <h4>Smiley Face</h4>
+                        <canvas id="smileyCanvas" width="200" height="200" style="border: 1px solid #ccc;"></canvas>
+                    </div>
+
+                    <!-- Spiral Pattern -->
+                    <div class="graphic-card">
+                        <h4>Spiral</h4>
+                        <canvas id="spiralCanvas" width="200" height="200" style="border: 1px solid #ccc;"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inline SVG Icons -->
+            <div class="graphics-section">
+                <h3>Inline SVG Icons</h3>
+                <div class="icon-gallery">
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>Info</span>
+                    </div>
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span>Check</span>
+                    </div>
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <span>Alert</span>
+                    </div>
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                        <span>Settings</span>
+                    </div>
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span>User</span>
+                    </div>
+                    <div class="icon-card">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1abc9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Mail</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Canvas Clock
+        function drawClock() {
+            const canvas = document.getElementById('clockCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const size = 200;
+            canvas.width = size;
+            canvas.height = size;
+            
+            function draw() {
+                const now = new Date();
+                const hours = now.getHours() % 12;
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+                
+                ctx.clearRect(0, 0, size, size);
+                
+                // Draw circle
+                ctx.beginPath();
+                ctx.arc(100, 100, 90, 0, 2 * Math.PI);
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 4;
+                ctx.stroke();
+                ctx.fillStyle = '#f0f0f0';
+                ctx.fill();
+                
+                // Draw numbers
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                for (let i = 1; i <= 12; i++) {
+                    const angle = (i * 30 - 90) * Math.PI / 180;
+                    const x = 100 + 70 * Math.cos(angle);
+                    const y = 100 + 70 * Math.sin(angle);
+                    ctx.fillText(i.toString(), x, y);
+                }
+                
+                // Draw hands
+                const hourAngle = (hours * 30 + minutes * 0.5 - 90) * Math.PI / 180;
+                const minuteAngle = (minutes * 6 + seconds * 0.1 - 90) * Math.PI / 180;
+                const secondAngle = (seconds * 6 - 90) * Math.PI / 180;
+                
+                ctx.beginPath();
+                ctx.moveTo(100, 100);
+                ctx.lineTo(100 + 45 * Math.cos(hourAngle), 100 + 45 * Math.sin(hourAngle));
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = '#333';
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.moveTo(100, 100);
+                ctx.lineTo(100 + 65 * Math.cos(minuteAngle), 100 + 65 * Math.sin(minuteAngle));
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = '#555';
+                ctx.stroke();
+                
+                ctx.beginPath();
+                ctx.moveTo(100, 100);
+                ctx.lineTo(100 + 80 * Math.cos(secondAngle), 100 + 80 * Math.sin(secondAngle));
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'red';
+                ctx.stroke();
+                
+                // Center dot
+                ctx.beginPath();
+                ctx.arc(100, 100, 4, 0, 2 * Math.PI);
+                ctx.fillStyle = '#333';
+                ctx.fill();
+                
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+        
+        // Bar Chart
+        function drawBarChart() {
+            const canvas = document.getElementById('barCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            canvas.width = 300;
+            canvas.height = 200;
+            
+            const data = [65, 45, 85, 70, 55, 90];
+            const colors = ['#4a90e2', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+            const barWidth = 35;
+            const startX = 20;
+            const bottomY = 170;
+            
+            ctx.clearRect(0, 0, 300, 200);
+            
+            for (let i = 0; i < data.length; i++) {
+                const height = data[i];
+                const x = startX + i * (barWidth + 8);
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.fillRect(x, bottomY - height, barWidth, height);
+                ctx.fillStyle = '#333';
+                ctx.font = '12px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(data[i], x + barWidth/2, bottomY - height - 5);
+                ctx.fillText(['A','B','C','D','E','F'][i], x + barWidth/2, bottomY + 15);
+            }
+        }
+        
+        // Smiley Face
+        function drawSmiley() {
+            const canvas = document.getElementById('smileyCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            canvas.width = 200;
+            canvas.height = 200;
+            
+            ctx.clearRect(0, 0, 200, 200);
+            
+            // Face
+            ctx.beginPath();
+            ctx.arc(100, 100, 80, 0, 2 * Math.PI);
+            ctx.fillStyle = '#ffd700';
+            ctx.fill();
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Eyes
+            ctx.fillStyle = '#333';
+            ctx.beginPath();
+            ctx.arc(70, 75, 10, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(130, 75, 10, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Eye highlights
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(65, 70, 3, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(125, 70, 3, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Smile
+            ctx.beginPath();
+            ctx.arc(100, 110, 45, 0.1, Math.PI - 0.1);
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            
+            // Tongue (optional)
+            ctx.beginPath();
+            ctx.arc(100, 145, 12, 0, Math.PI);
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fill();
+        }
+        
+        // Spiral Pattern
+        function drawSpiral() {
+            const canvas = document.getElementById('spiralCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            canvas.width = 200;
+            canvas.height = 200;
+            
+            ctx.clearRect(0, 0, 200, 200);
+            ctx.beginPath();
+            ctx.moveTo(100, 100);
+            
+            let angle = 0;
+            let radius = 0;
+            const maxRadius = 85;
+            const step = 0.2;
+            
+            for (let i = 0; i < 200; i++) {
+                angle += 0.2;
+                radius = (angle / (2 * Math.PI)) * 10;
+                if (radius > maxRadius) break;
+                const x = 100 + radius * Math.cos(angle);
+                const y = 100 + radius * Math.sin(angle);
+                ctx.lineTo(x, y);
+            }
+            
+            ctx.strokeStyle = '#4a90e2';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Add gradient effect
+            for (let i = 0; i < 8; i++) {
+                ctx.beginPath();
+                const rad = 20 + i * 10;
+                ctx.arc(100, 100, rad, 0, 2 * Math.PI);
+                ctx.strokeStyle = `rgba(74, 144, 226, ${0.3 - i * 0.03})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+        }
+        
+        // Initialize all canvases
+        drawClock();
+        drawBarChart();
+        drawSmiley();
+        drawSpiral();
+        
+        // Redraw bar chart on window resize (just for demonstration)
+        window.addEventListener('resize', function() {
+            drawBarChart();
+        });
+    </script>
+</body>
+</html>

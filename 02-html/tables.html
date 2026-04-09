@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-tables</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/09.tables.css">
+</head>
+<body>
+    <a href="index.html" class="boton-volver">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256" >
+            <path
+                d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>09 - Tables</h1>
+            <h2>Creates tables for data display.</h2>
+        </header>
+       <center>
+        <p>Tables are a powerful way to organize and present data in a structured format.
+        <!-- Simple table for data display -->
+        <table>
+            <caption>Employee Information</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Salary (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Miguel Rodriguez</td>
+                    <td>Software Engineer</td>
+                    <td>Engineering</td>
+                    <td>150,000</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Tabares Bueno</td>
+                    <td>Concierge</td>
+                    <td>R.H</td>
+                    <td>5,000</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Daliana Duque</td>
+                    <td>UX Designer</td>
+                    <td>Design</td>
+                    <td>78,500</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Santiago Aguirre</td>
+                    <td>Data Analyst</td>
+                    <td>Analytics</td>
+                    <td>74,200</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>Nelson Serna</td>
+                    <td>QA Engineer</td>
+                    <td>Quality Assurance</td>
+                    <td>1,800</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: right; font-weight: bold;">Total Employees:</td>
+                    <td>5</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+        <!-- Second table: Sales data example -->
+        <table>
+            <caption>Monthly Sales Report (2025)</caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Product A</th>
+                    <th>Product B</th>
+                    <th>Product C</th>
+                    <th>Total Revenue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>1,240</td>
+                    <td>890</td>
+                    <td>2,100</td>
+                    <td>$48,200</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>1,380</td>
+                    <td>950</td>
+                    <td>2,250</td>
+                    <td>$52,100</td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td>1,510</td>
+                    <td>1,020</td>
+                    <td>2,400</td>
+                    <td>$56,800</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="font-weight: bold;">Quarter Total</td>
+                    <td>4,130</td>
+                    <td>2,860</td>
+                    <td>6,750</td>
+                    <td style="font-weight: bold;">$157,100</td>
+                </tr>
+            </tfoot>
+        </table>
+        </center>
+    </main>
+</body>
+</html>
