@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14-Video</title>
+    <link rel="stylesheet" href="../src/css/02-html.css">
+    <link rel="stylesheet" href="../src/css/14-video.css">
+</head>
+<body>
+    <a href="index.html" class="boton-volver">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000000" viewBox="0 0 256 256">
+            <path d="M232,56A104.11,104.11,0,0,1,128,160H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48a8,8,0,0,1,11.32,11.32L51.31,144H128a88.1,88.1,0,0,0,88-88,8,8,0,0,1,16,0Z"></path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>14 - Video</h1>
+            <h2>Inserts video files.</h2>
+        </header>
+
+        <div class="video-container">
+            <!-- Video Player 1: Your custom video -->
+            <div class="video-card">
+                <div class="video-icon">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="1.5">
+                        <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor"/>
+                        <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/>
+                    </svg>
+                </div>
+                <h3>Your Video Player</h3>
+                <p class="video-description">Replace the src attribute with your own video file</p>
+                
+                <video controls class="custom-video" poster="https://via.placeholder.com/640x360/1a2c3e/ffffff?text=Your+Video">
+                    <source src="./video/html5.mp4" type="video/mp4">
+                    <source src="./video/html5.webm" type="video/webm">
+                    <source src="./video/html5.ogv" type="video/ogg">
+                    Your browser does not support the video element.
+                </video>
+                
+                <div class="video-info">
+                    <span class="info-label">Current file:</span>
+                    <span class="info-value">your-video-file.mp4</span>
+                </div>
+                
+            </div>
+
+            
+            </div>
+        </div>
+
+       
+</body>
+</html>
