@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../03-css/style.css">
+    <title>03 - attr-style | CSS en línea</title>
+</head>
+<body>
+    <!-- ❌ Mala práctica: CSS directamente en el atributo style -->
+    <h1 style="color: #8B6BD9; font-size: 3rem; text-align: center; margin-top: 50px;">
+        CSS en Línea (atributo style)
+    </h1>
+    
+    <p style="color: #4A2B8C; font-size: 1.2rem; text-align: center; padding: 20px;">
+        Este es un ejemplo de CSS aplicado directamente con el atributo "style"
+    </p>
+    
+    <div style="background: linear-gradient(145deg, #8B6BD9, #4A2B8C); 
+                border-radius: 16px; 
+                padding: 20px; 
+                margin: 20px auto; 
+                max-width: 500px;
+                text-align: center;">
+        
+        <img src="logo-css.png" alt="CSS Logo" style="width: 100px; 
+                                                          border-radius: 50%; 
+                                                          border: 3px solid white;">
+        
+        <h3 style="color: white; margin: 10px 0;">Miguel Angel Rodriguez</h3>
+        
+        <a href="#" style="display: inline-block; 
+                          background: white; 
+                          color: #8B6BD9; 
+                          padding: 10px 20px; 
+                          border-radius: 50px;
+                          text-decoration: none;
+                          font-weight: bold;">
+            Ver más
+        </a>
+    </div>
+    
+    <!-- Esto es horrible de mantener -->
+    <button style="background: #4A2B8C; 
+                   color: white; 
+                   border: none; 
+                   padding: 12px 24px; 
+                   border-radius: 8px;
+                   cursor: pointer;
+                   display: block;
+                   margin: 20px auto;">
+        Botón con estilo inline
+    </button>
+</body>
+</html>
