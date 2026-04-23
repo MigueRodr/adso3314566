@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #8B6BD9;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3CradialGradient id='a' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%236B46C1'/%3E%3Cstop offset='1' stop-color='%238B6BD9'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='750' x2='1550' y2='750'%3E%3Cstop offset='0' stop-color='%237b59cd'/%3E%3Cstop offset='1' stop-color='%238B6BD9'/%3E%3C/linearGradient%3E%3Cpath id='s' fill='url(%23b)' d='M1549.2 51.6c-5.4 99.1-20.2 197.6-44.2 293.6c-24.1 96-57.4 189.4-99.3 278.6c-41.9 89.2-92.4 174.1-150.3 253.3c-58 79.2-123.4 152.6-195.1 219c-71.7 66.4-149.6 125.8-232.2 177.2c-82.7 51.4-170.1 94.7-260.7 129.1c-90.6 34.4-184.4 60-279.5 76.3C192.6 1495 96.1 1502 0 1500c96.1-2.1 191.8-13.3 285.4-33.6c93.6-20.2 185-49.5 272.5-87.2c87.6-37.7 171.3-83.8 249.6-137.3c78.4-53.5 151.5-114.5 217.9-181.7c66.5-67.2 126.4-140.7 178.6-218.9c52.3-78.3 96.9-161.4 133-247.9c36.1-86.5 63.8-176.2 82.6-267.6c18.8-91.4 28.6-184.4 29.6-277.4c0.3-27.6 23.2-48.7 50.8-48.4s49.5 21.8 49.2 49.5c0 0.7 0 1.3-0.1 2L1549.2 51.6z'/%3E%3Cg id='g'%3E%3Cuse href='%23s' transform='scale(0.12) rotate(60)'/%3E%3Cuse href='%23s' transform='scale(0.2) rotate(10)'/%3E%3Cuse href='%23s' transform='scale(0.25) rotate(40)'/%3E%3Cuse href='%23s' transform='scale(0.3) rotate(-20)'/%3E%3Cuse href='%23s' transform='scale(0.4) rotate(-30)'/%3E%3Cuse href='%23s' transform='scale(0.5) rotate(20)'/%3E%3Cuse href='%23s' transform='scale(0.6) rotate(60)'/%3E%3Cuse href='%23s' transform='scale(0.7) rotate(10)'/%3E%3Cuse href='%23s' transform='scale(0.835) rotate(-40)'/%3E%3Cuse href='%23s' transform='scale(0.9) rotate(40)'/%3E%3Cuse href='%23s' transform='scale(1.05) rotate(25)'/%3E%3Cuse href='%23s' transform='scale(1.2) rotate(8)'/%3E%3Cuse href='%23s' transform='scale(1.333) rotate(-60)'/%3E%3Cuse href='%23s' transform='scale(1.45) rotate(-30)'/%3E%3Cuse href='%23s' transform='scale(1.6) rotate(10)'/%3E%3C/g%3E%3C/defs%3E%3Cg transform='translate(180 0)'%3E%3Cg transform='translate(0 75)'%3E%3Ccircle fill='url(%23a)' r='3000'/%3E%3Cg opacity='0.5'%3E%3Ccircle fill='url(%23a)' r='2000'/%3E%3Ccircle fill='url(%23a)' r='1800'/%3E%3Ccircle fill='url(%23a)' r='1700'/%3E%3Ccircle fill='url(%23a)' r='1651'/%3E%3Ccircle fill='url(%23a)' r='1450'/%3E%3Ccircle fill='url(%23a)' r='1250'/%3E%3Ccircle fill='url(%23a)' r='1175'/%3E%3Ccircle fill='url(%23a)' r='900'/%3E%3Ccircle fill='url(%23a)' r='750'/%3E%3Ccircle fill='url(%23a)' r='500'/%3E%3Ccircle fill='url(%23a)' r='380'/%3E%3Ccircle fill='url(%23a)' r='250'/%3E%3C/g%3E%3Cg transform='rotate(-28.8 0 0)'%3E%3Cuse href='%23g' transform='rotate(10)'/%3E%3Cuse href='%23g' transform='rotate(120)'/%3E%3Cuse href='%23g' transform='rotate(240)'/%3E%3C/g%3E%3Ccircle fill-opacity='0' fill='url(%23a)' r='3000'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10 10 L 90 10 L 90 90 L 10 90 Z' fill='none' stroke='%239B7BE3' stroke-width='0.5'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Botón Volver al Inicio */
+.home-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #8B6BD9, #4A2B8C);
+    border: 2px solid #D4C4FF;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #F0EBFF;
+    font-family: 'Segoe UI', 'Consolas', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.home-button:hover {
+    background: linear-gradient(145deg, #A88BED, #6B46C1);
+    border-color: #E9D4FF;
+    color: #FFFFFF;
+    box-shadow: 0 6px 25px rgba(168, 139, 237, 0.5);
+    transform: scale(1.05) translateX(-5px);
+}
+
+.home-button:active {
+    transform: scale(0.98);
+}
+
+.home-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 5px rgba(168, 139, 237, 0.5));
+}
+
+.home-text {
+    font-size: 1rem;
+    font-weight: 600;
+    border-left: 2px solid rgba(212, 196, 255, 0.5);
+    padding-left: 12px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #F0EBFF 0%, #D4C4FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(107, 70, 193, 0.3);
+}
+
+.profile-img {
+    border: 4px solid #D4C4FF;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 0 2px rgba(168, 139, 237, 0.3) inset;
+    transition: all 0.4s ease;
+    filter: grayscale(20%);
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: #E9D4FF;
+    filter: grayscale(0%);
+    box-shadow: 
+        0 20px 40px rgba(168, 139, 237, 0.3),
+        0 0 0 3px rgba(168, 139, 237, 0.5) inset;
+}
+
+h4.name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #F0EBFF;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+h4.name::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #A88BED, #CFBBFC, transparent);
+    border-radius: 3px;
+}
+
+/* Estilo base de menu */
+menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+menu a {
+    background: rgba(107, 70, 193, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(168, 139, 237, 0.3);
+    border-radius: 16px;
+    padding: 8px 30px 8px 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.2),
+        0 2px 5px rgba(168, 139, 237, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 196, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+menu a:hover::before {
+    left: 100%;
+}
+
+menu a:hover {
+    transform: translateX(12px) scale(1.02);
+    background: rgba(139, 107, 217, 0.85);
+    border-color: rgba(212, 196, 255, 0.5);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(207, 187, 252, 0.4);
+}
+
+menu span {
+    background: linear-gradient(135deg, #4A2B8C, #2D1B54);
+    color: #F0EBFF;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    margin-right: 20px;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.3),
+        0 0 0 1px #8B6BD9 inset;
+    transition: all 0.3s ease;
+    border: 1px solid #A88BED;
+}
+
+menu a:hover span {
+    background: linear-gradient(135deg, #8B6BD9, #4A2B8C);
+    color: #FFFFFF;
+    transform: scale(1.05);
+    box-shadow: 
+        0 6px 15px rgba(139, 107, 217, 0.3),
+        0 0 0 2px rgba(212, 196, 255, 0.5) inset;
+}
+
+aside {
+    text-align: left;
+}
+
+aside h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #E9D4FF;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+menu a:hover aside h4 {
+    color: #FFFFFF;
+}
+
+aside small {
+    color: #CFBBFC;
+    font-size: 0.9rem;
+    font-weight: 300;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+menu a:hover aside small {
+    color: #E9D4FF;
+}
+
+menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #CFBBFC);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+menu a:hover::after {
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, .profile-img, h4.name, menu a {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+menu a:nth-child(1) { animation-delay: 0.1s; }
+menu a:nth-child(2) { animation-delay: 0.2s; }
+menu a:nth-child(3) { animation-delay: 0.3s; }
+menu a:nth-child(4) { animation-delay: 0.4s; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2D1B54;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8B6BD9, #6B46C1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #A88BED, #8B6BD9);
+}
+
+/* Botón volver (alternativo) */
+.boton-volver {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #8B6BD9, #4A2B8C);
+    border: 2px solid #D4C4FF;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #F0EBFF;
+    font-family: 'Segoe UI', 'Consolas', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+/* Recuadro */
+.recuadro {
+    background: rgba(107, 70, 193, 0.5);
+    border: 1px solid rgba(168, 139, 237, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.2),
+        0 2px 5px rgba(168, 139, 237, 0.2);
+}
+
+.recuadro p {
+    font-size: 1.1rem;
+    color: #F0EBFF;
+    line-height: 1.6;
+}
+
+/* ==================== DOS MENÚS LADO A LADO ==================== */
+.menus-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.menu-column {
+    flex: 1;
+    min-width: 350px;
+}
+
+/* Fondos degradados para cada columna */
+.menu-column:first-child {
+    background: linear-gradient(145deg, rgba(107, 70, 193, 0.4), rgba(74, 43, 140, 0.6));
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 20px;
+    border: 1px solid rgba(168, 139, 237, 0.4);
+}
+
+.menu-column:last-child {
+    background: linear-gradient(145deg, rgba(139, 107, 217, 0.4), rgba(53, 28, 117, 0.6));
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 20px;
+    border: 1px solid rgba(207, 187, 252, 0.4);
+}
+
+/* Los menús dentro de cada columna se mantienen en UNA columna vertical */
+.menu-column menu {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+/* El título h3 */
+.menu-column menu h3 {
+    text-align: center !important;
+    font-size: 1.6rem !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid #A88BED !important;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    .menus-container {
+        flex-direction: column;
+    }
+    
+    .menu-column {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h4.name {
+        font-size: 1.4rem;
+    }
+    
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    menu span {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 1.2rem;
+        margin-right: 15px;
+    }
+    
+    aside h4 {
+        font-size: 1.2rem;
+    }
+
+    .home-button, .boton-volver {
+        padding: 10px 20px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .home-icon {
+        font-size: 1.4rem;
+    }
+
+    .home-text {
+        font-size: 0.85rem;
+    }
+}
