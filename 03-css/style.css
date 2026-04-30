@@ -1,5 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
+/* ==================== RECUADRO PARA UNIDADES ABSOLUTAS ==================== */
+/* Este recuadro se aplicará a cualquier <ul> con clase "recuadro-unidades" */
+
+.recuadro-unidades {
+    background: linear-gradient(145deg, rgba(107, 70, 193, 0.6), rgba(74, 43, 140, 0.8));
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(168, 139, 237, 0.5);
+    border-radius: 24px;
+    padding: 30px 40px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(168, 139, 237, 0.2) inset,
+        0 0 20px rgba(139, 107, 217, 0.3);
+    transition: all 0.3s ease;
+    list-style-position: inside;
+    color: #F0EBFF;
+    font-family: 'Inter', monospace;
+}
+
+.recuadro-unidades:hover {
+    transform: translateY(-5px);
+    border-color: rgba(207, 187, 252, 0.8);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(168, 139, 237, 0.3) inset,
+        0 0 30px rgba(168, 139, 237, 0.4);
+}
+
+/* Estilo para cada item de la lista dentro del recuadro */
+.recuadro-unidades li {
+    margin: 15px 0;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.recuadro-unidades li:hover {
+    background: rgba(168, 139, 237, 0.2);
+    transform: translateX(8px);
+    border-left: 3px solid #A88BED;
+}
+
+/* Contenedor que centra el recuadro (opcional, si quieres una sección específica) */
+.section-unidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Estilo adicional para el encabezado de la página de unidades */
+.header-unidades ul {
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    background: rgba(107, 70, 193, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 15px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(168, 139, 237, 0.3);
+    list-style-position: inside;
+    color: #F0EBFF;
+}
+
+.header-unidades ul li {
+    margin: 8px 0;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -331,7 +406,7 @@ menu a:nth-child(4) { animation-delay: 0.4s; }
 
 /* Recuadro */
 .recuadro {
-    background: rgba(107, 70, 193, 0.5);
+    background: rgba(46, 7, 139, 0.5);
     border: 1px solid rgba(168, 139, 237, 0.3);
     border-radius: 16px;
     padding: 20px;
@@ -443,4 +518,122 @@ menu a:nth-child(4) { animation-delay: 0.4s; }
     .home-text {
         font-size: 0.85rem;
     }
+}
+/* ==================== RECUADRO PARA CUALQUIER LISTA DENTRO DE SECTION ==================== */
+/* Se aplica a ul, ol, menu, dl dentro de <section> */
+
+section ul,
+section ol,
+section menu,
+section dl {
+    background: linear-gradient(145deg, rgba(107, 70, 193, 0.6), rgba(74, 43, 140, 0.8));
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(168, 139, 237, 0.5);
+    border-radius: 24px;
+    padding: 30px 40px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(168, 139, 237, 0.2) inset,
+        0 0 20px rgba(139, 107, 217, 0.3);
+    transition: all 0.3s ease;
+    list-style-position: inside;
+    color: #F0EBFF;
+    font-family: 'Inter', monospace;
+}
+
+/* Efecto hover para el recuadro */
+section ul:hover,
+section ol:hover,
+section menu:hover,
+section dl:hover {
+    transform: translateY(-5px);
+    border-color: rgba(207, 187, 252, 0.8);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(168, 139, 237, 0.3) inset,
+        0 0 30px rgba(168, 139, 237, 0.4);
+}
+
+/* Estilo para cada item de la lista */
+section ul li,
+section ol li,
+section menu li,
+section dl dd {
+    margin: 15px 0;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Efecto hover para cada item */
+section ul li:hover,
+section ol li:hover,
+section menu li:hover,
+section dl dd:hover {
+    background: rgba(168, 139, 237, 0.2);
+    transform: translateX(8px);
+    border-left: 3px solid #A88BED;
+}
+
+/* Para description list (dt) */
+section dl dt {
+    font-weight: 700;
+    margin-top: 10px;
+    color: #D4C4FF;
+}
+
+/* ==================== MANTENER EL HEADER SIN AFECTAR ==================== */
+/* Esto asegura que el header no herede ningún estilo del recuadro */
+
+header ul,
+header ol,
+header menu,
+header dl {
+    background: rgba(107, 70, 193, 0.3) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(168, 139, 237, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 15px 30px !important;
+    width: auto !important;
+    margin: 20px auto !important;
+    box-shadow: none !important;
+    transform: none !important;
+    display: inline-block !important;
+    list-style-position: inside !important;
+}
+
+header ul:hover,
+header ol:hover,
+header menu:hover,
+header dl:hover {
+    transform: none !important;
+    border-color: rgba(168, 139, 237, 0.3) !important;
+    box-shadow: none !important;
+}
+
+header ul li,
+header ol li,
+header menu li,
+header dl dd,
+header dl dt {
+    background: transparent !important;
+    padding: 8px 0 !important;
+    transform: none !important;
+    border-left: none !important;
+}
+
+header ul li:hover,
+header ol li:hover,
+header menu li:hover,
+header dl dd:hover,
+header dl dt:hover {
+    background: transparent !important;
+    transform: none !important;
+    border-left: none !important;
 }

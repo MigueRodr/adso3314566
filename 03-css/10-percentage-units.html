@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Percentage Units</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+<style>
+    main {
+        width: 100%;
+        margin: 0 auto;
+        section.percentage {
+        margin: 0 auto;
+        width: 80%;
+        div.parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                height: 50dvh;
+                &.child1{
+                    background-color: rgb(10, 31, 216);
+                    width: 70%;
+                }
+                &.child2{
+                    background-color: rgb(24, 192, 221);
+                    width: 30%;
+                }
+            }
+            height: 50dvh;
+          }
+        }
+    }
+</style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button">
+    <span class="home-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </span>
+    <span class="home-text">Volver</span>
+</a>
+        <main>
+            <header>
+                <h1>10 - Percentage Units</h1>
+                <h2>Are relative to the size of the parent element. </h2>
+            </header>
+              <div class="recuadro">
+            <section class="percentage">
+                <div class="parent">
+                    <div class="child1">70%</div>
+                    <div class="child2">30%</div>
+                </div>
+                </div>
+            </section>
+        </main>
+</body>
+</html>

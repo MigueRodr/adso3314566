@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Colors</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+ <style>
+    div.colors {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2rem 0;
+        align-items: center;
+         &:nth-of-type(2) {
+                div {
+                    font-size: 0.5rem;
+                }
+            }
+                &:nth-of-type(3) {
+                    div {
+                        font-size: 0.8rem;
+                    }
+                }
+            &:nth-of-type(4) {
+                div {
+                    font-size: 0.1rem;
+                }
+            }
+        div {
+          display: flex;
+          justify-content: center;
+            align-items: center;
+            div {
+                height: 70px;
+                width: 70px;
+                transition: all 0.4s ease-in;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.4);
+                }
+                &:first-child, &:last-child {
+                    color:white;
+                }
+                &.marron {
+                    background-color: brown;
+                }
+                &.red {
+                    background-color: red;
+                }
+                &.orange {
+                    background-color: orange;
+                }
+                &.yellow {
+                    background-color: yellow;
+                }
+                &.olive {
+                    background-color: olive;
+                }
+                &.purple {
+                    background-color: purple;
+                }
+                &.fuchsia {
+                    background-color: fuchsia;
+                }
+                &.white {
+                    background-color: white;
+                    border: 1px solid #ccc;
+                }
+                &.lime {
+                    background-color: lime;
+                }
+                &.green {
+                    background-color: green;
+                }
+                &.navy {
+                    background-color: navy;
+                }
+                &.blue {
+                    background-color: blue;
+                }
+                &.aqua {
+                    background-color: aqua;
+                }
+                &.teal {
+                    background-color: teal;
+                }
+                &.black {
+                    background-color: black;
+                    color: white;
+                }
+                &.gray {
+                    background-color: gray;
+                }
+                &.silver {
+                    background-color: silver;
+                }
+            }
+        }
+    }
+ </style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button">
+    <span class="home-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </span>
+    <span class="home-text">Volver</span>
+</a>
+    <main>
+        <main>
+            <header>
+                <h1>11 - Colors</h1>
+                <h2>Learn how to use colors in CSS.</h2>
+            </header>
+            <section>
+                <h3>Name Colors:</h3>
+            <div class="recuadro">
+                <div class="colors">
+                <div>
+                    <div class="marron">marron</div>
+                    <div class="red">red</div>
+                    <div class="orange">orange</div>
+                    <div class="yellow">yellow</div>
+                    <div class="olive">olive</div>
+
+                </div>
+                <div>
+                    <div class="purple">purple</div>
+                    <div class="fuchsia">fuchsia</div>
+                    <div class="white">white</div>
+                    <div class="lime">lime</div>
+                    <div class="green">green</div>
+                </div>
+                <div>
+                    <div class="navy">navy</div>
+                    <div class="blue">blue</div>
+                    <div class="aqua">aqua</div>
+                    <div class="teal">teal</div>
+                </div>
+                <div>
+                    <div class="black">black</div>
+                    <div class="gray">gray</div>
+                    <div class="silver">silver</div>
+                </div>
+            </div>
+            </div>
+            <h3>RGB Decimal </h3>
+             <div class="recuadro">
+                <div class="colors">
+                <div>
+                    <div class="marron">rgb(165, 42, 42)</div>
+                    <div class="red">rgb(255, 0, 0) </div>
+                    <div class="orange">rgb(255, 165, 0)</div>
+                    <div class="yellow">rgb(255, 255, 0)</div>
+                    <div class="olive">rgb(128, 128, 0)</div>
+
+                </div>
+                <div>
+                    <div class="purple">rgb(128, 0, 128)</div>
+                    <div class="fuchsia">rgb(255, 0, 255)</div>
+                    <div class="white">rgb(255, 255, 255)</div>
+                    <div class="lime">rgb(0, 255, 0)</div>
+                    <div class="green">rgb(0, 128, 0)</div>
+                </div>
+                <div>
+                    <div class="navy">rgb(0, 0, 128)</div>
+                    <div class="blue">rgb(0, 0, 255)</div>
+                    <div class="aqua">rgb(0, 255, 255)</div>
+                    <div class="teal">rgb(0, 128, 128)</div>
+                </div>
+                <div>
+                    <div class="black">rgb(0, 0, 0)</div>
+                    <div class="gray">rgb(128, 128, 128)</div>
+                    <div class="silver">rgb(192, 192, 192)</div>
+                </div>
+            </div> 
+            
+            </div>
+            </div>
+
+            <h4>Hexadecimal </h4>
+             <div class="recuadro">
+                <div class="colors">
+                <div>
+                    <div class="marron">#A52A2A</div>
+                    <div class="red">#FF0000</div>
+                    <div class="orange">#FFA500</div>
+                    <div class="yellow">#FFFF00</div>
+                    <div class="olive">#808000</div>
+
+                </div>
+                <div>
+                    <div class="purple">#800080</div>
+                    <div class="fuchsia">#FF00FF</div>
+                    <div class="white">#FFFFFF</div>
+                    <div class="lime">#00FF00</div>
+                    <div class="green">#008000</div>
+                </div>
+                <div>
+                    <div class="navy">#000080</div>
+                    <div class="blue">#0000FF</div>
+                    <div class="aqua">#00FFFF</div>
+                    <div class="teal">#008080</div>
+                </div>
+                <div>
+                    <div class="black">#000000</div>
+                    <div class="gray">#808080</div>
+                    <div class="silver">#C0C0C0</div>
+                </div>
+            </div>
+            </div>
+
+
+            <h4>Hue, Saturation, Lighting </h4>
+             <div class="recuadro">
+                <div class="colors">
+                <div>
+                    <div class="marron">hsl(0, 59%, 41%)</div>
+                    <div class="red">hsl(0, 100%, 50%)</div>
+                    <div class="orange">hsl(39, 100%, 50%)</div>
+                    <div class="yellow">hsl(60, 100%, 50%)</div>
+                    <div class="olive">hsl(60, 100%, 25%)</div>
+
+                </div>
+                <div>
+                    <div class="purple">hsl(300, 100%, 25%)</div>
+                    <div class="fuchsia">hsl(300, 100%, 50%)</div>
+                    <div class="white">hsl(0, 0%, 100%)</div>
+                    <div class="lime">hsl(120, 100%, 50%)</div>
+                    <div class="green">hsl(120, 100%, 25%)</div>
+                </div>
+                <div>
+                    <div class="navy">hsl(240, 100%, 25%)</div>
+                    <div class="blue">hsl(240, 100%, 50%)</div>
+                    <div class="aqua">hsl(180, 100%, 50%)</div>
+                    <div class="teal">hsl(180, 100%, 25%)</div>
+                </div>
+                <div>
+                    <div class="black">hsl(0, 0%, 0%)</div>
+                    <div class="gray">hsl(0, 0%, 50%)</div>
+                    <div class="silver">hsl(0, 0%, 75%)</div>
+                </div>
+            </div>
+
+
+               
+
+            </section>
+        </main>
+</body>
+</html>
