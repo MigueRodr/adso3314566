@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 - Positioning: Static, Relative, Absolute, Fixed, Sticky</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+    <style>
+        /* Estilos generales para la página de ejemplo */
+        
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.096);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+        header {
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #0f172a;
+            border-left: 6px solid #6a1ece;
+            padding-left: 1rem;
+        }
+        .demo-container {
+            border: 2px dashed #6e19df;
+            background: #4909e065;
+            padding: 1rem;
+            margin-bottom: 2.5rem;
+            border-radius: 1rem;
+            position: relative;
+        }
+        .demo-title {
+            font-weight: bold;
+            background: #e2e8f0;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .caja {
+            padding: 0.75rem 1rem;
+            margin: 0.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+        .caja1 { background-color: #116adf; }
+        .caja2 { background-color: #60a5fa; }
+        .caja3 { background-color: #2133d8; }
+        .caja4 { background-color: #0abbf1; }
+        .highlight {
+            background-color: #c3d3fe;
+           
+        }
+        .note {
+            background: #0752c288;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            ;
+        }
+        .sticky-container {
+            height: 200px;
+            overflow-y: auto;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
+            background: #f1f5f9;
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+        .sticky-box {
+            background: #a855f7;
+            color: rgb(255, 255, 255);
+            padding: 0.75rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .long-content {
+            background: rgb(20, 86, 228);
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin: 0.5rem 0;
+        }
+        hr {
+            margin: 2rem 0;
+        }
+        .example-space {
+            min-height: 250px;
+            position: relative;
+            background: #5e0686;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+        .relative-parent {
+            position: relative;
+            background: rgba(72, 13, 209, 0.322);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+        }
+        .absolute-child {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            background: #1578fa;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .fixed-demo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0f172a;
+            color: rgb(255, 255, 255);
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button" style="position: fixed; top: 20px; left: 20px; background: #1e293b; color: white; padding: 8px 16px; border-radius: 40px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; z-index: 1100;">
+        <span class="home-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+        <span class="home-text">Volver</span>
+    </a>
+
+    <main>
+        <header>
+            <h1>Posicionamiento en CSS</h1>
+            <h2>Normal (static) · Relative · Absolute · Fixed · Sticky</h2>
+            <p>Cada elemento se posiciona segun el flujo normal o se desplaza fuera de el. Observa los ejemplos.</p>
+        </header>
+
+        <!-- 1. STATIC -->
+        <div class="demo-container">
+            <div class="demo-title">1. POSITION: STATIC (valor por defecto)</div>
+            <div class="caja caja1">Caja 1 - Static (flujo normal)</div>
+            <div class="caja caja2">Caja 2 - Static</div>
+            <div class="caja caja3">Caja 3 - Static</div>
+            <div class="note">static es el comportamiento normal. Los elementos se colocan en orden, uno tras otro, respetando el flujo del documento. top/left/right/bottom no tienen efecto.</div>
+        </div>
+
+        <!-- 2. RELATIVE -->
+        <div class="demo-container">
+            <div class="demo-title">2. POSITION: RELATIVE</div>
+            <div class="caja caja1">Caja 1 - Relative (sin desplazar)</div>
+            <div class="caja caja2" style="position: relative; top: 15px; left: 20px; background-color: #3b82f6;">Caja 2 - Relative: top:15px; left:20px</div>
+            <div class="caja caja3">Caja 3 - Static (no se ve afectada por el desplazamiento de la caja 2, el espacio original de la caja 2 se mantiene)</div>
+            <div class="note">relative: Se desplaza respecto a su posicion original, pero reserva el espacio original. top/left/right/bottom funcionan. El flujo de los demas elementos no cambia.</div>
+        </div>
+
+        <!-- 3. ABSOLUTE -->
+        <div class="demo-container">
+            <div class="demo-title">3. POSITION: ABSOLUTE</div>
+            <div class="relative-parent" style="position: relative; min-height: 180px;">
+                <p style="margin:0 0 10px 0;">Contenedor con position: relative (punto de referencia)</p>
+                <div class="caja caja1" style="width: 60%;">Elemento normal (static)</div>
+                <div class="absolute-child">
+                    ABSOLUTE: bottom:10px; right:20px
+                </div>
+                <div class="note" style="margin-top: 20px;">El elemento absolute se posiciona respecto al ancestro mas cercano con position distinto de static (aqui el div .relative-parent). Se extrae del flujo y no reserva espacio.</div>
+            </div>
+            <div class="caja caja3" style="margin-top: 10px;">Este elemento esta fuera del contenedor relativo, el absolute no le afecta porque esta fuera del flujo.</div>
+        </div>
+
+        <!-- 4. FIXED -->
+        <div class="demo-container">
+            <div class="demo-title">4. POSITION: FIXED</div>
+            <div class="caja caja4">Contenido normal - Haz scroll vertical para ver el elemento fijo (abajo derecha) que se mantiene en pantalla.</div>
+            <div class="note">fixed se posiciona respecto a la ventana del navegador (viewport). No se mueve al hacer scroll. En este ejemplo, un pequeño bloque fijo aparece en la esquina inferior derecha. (Ya existe un boton "Volver" fixed arriba a la izquierda y un mini bloque fijo adicional).</div>
+        </div>
+
+        <!-- 5. STICKY -->
+        <div class="demo-container">
+            <div class="demo-title">5. POSITION: STICKY</div>
+            <div class="sticky-container">
+                <div class="sticky-box">SOY STICKY: me mantengo pegado mientras estoy dentro de mi contenedor (top:0)</div>
+                <div class="long-content">Contenido 1 - Sigue scrolleando para ver que el sticky se queda arriba hasta que sale de su contenedor.</div>
+                <div class="long-content">Contenido 2 - sticky solo funciona dentro de su contenedor con overflow auto.</div>
+                <div class="long-content">Contenido 3 - Observa como al salir del area gris, el sticky se va con el scroll.</div>
+                <div class="long-content">Contenido 4 - Es util para cabeceras de seccion.</div>
+                <div class="long-content">Contenido 5 - Cuando el contenedor termina, el sticky ya no se queda pegado.</div>
+            </div>
+            <div class="note">sticky: hibrido entre relative y fixed. Permanece "pegado" dentro de su contenedor hasta que el scroll lo alcanza, pero sin salirse del bloque contenedor. Requiere top/left/right/bottom y un contenedor con scroll.</div>
+        </div>
+
+        <hr>
+        <div class="note" style="background: #1f5ee6;">
+            <strong>Resumen rapido:</strong><br>
+            - static: flujo normal, sin desplazamiento.<br>
+            - relative: se mueve respecto a si mismo, deja hueco.<br>
+            - absolute: se posiciona respecto al ancestro con position (no static), se saca del flujo.<br>
+            - fixed: respecto al viewport, no se mueve con scroll.<br>
+            - sticky: se comporta como relativo hasta que el scroll lo activa, luego se fija dentro de su contenedor.
+        </div>
+    </main>
+
+    <!-- Ejemplo de elemento fixed adicional -->
+    <div class="fixed-demo">
+        FIXED (siempre visible)
+    </div>
+</body>
+</html>
