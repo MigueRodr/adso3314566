@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-float</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+    <style>
+        .ejemplo {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #E9D5FF;
+            border-radius: 10px;
+        }
+        
+        .titulo {
+            color: #E9D5FF;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .mario-float-left {
+            float: left;
+            margin: 0 15px 10px 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        
+        .mario-float-right {
+            float: right;
+            margin: 0 0 10px 15px;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .texto-mario {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button">
+        <span>← Volver</span>
+    </a>
+    <main>
+        <header>
+            <h1>16-Float</h1>
+            <h2>Pushes the element to either the left or right side.</h2>
+        </header>
+        <section>
+           <div class="recuadro">
+            <div class="ejemplo">
+                <div class="titulo">Float Left</div>
+                <img src="../src/imgs/angry.jpeg" alt="angry" class="mario-float-left">
+                <div class="texto-mario">
+                    lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate! Doloribus, quisquam.
+                <div class="clearfix"></div>
+            </div>
+            </div>
+
+              <div class="recuadro">
+            <div class="ejemplo">
+                <div class="titulo">Float Right</div>
+                <img src="../src/imgs/angry.jpeg" alt="angry" class="mario-float-right">
+                <div class="texto-mario">
+                  lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate! Doloribus, quisquam.
+                </div>
+                <div class="clearfix"></div>
+                
+            </div>
+            
+            
+            <div class="ejemplo">
+                <div class="titulo">Float con Múltiples Elementos</div>
+                <img src="../src/imgs/angry.jpeg" alt="angry" class="mario-float-left">
+                <img src="../src/imgs/angry.jpeg" alt="angry" class="mario-float-right">
+                <div class="texto-mario">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate! Doloribus, quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate! Doloribus, quisquam.
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

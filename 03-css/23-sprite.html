@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 - Sprite </title>
+    <link rel="stylesheet" href="../03-css/style.css">
+<style>
+
+div#sprite {
+    background: url(../src/imgs/anim-sprite.png);
+    height: 256px;
+    margin: 1rem auto;
+    width: 256px;
+}
+
+div#sprite.sp1 { background-position: calc(-256px * 0) 0; }
+div#sprite.sp2 { background-position: calc(-256px * 1) 0; }
+div#sprite.sp3 { background-position: calc(-256px * 2) 0; }
+div#sprite.sp4 { background-position: calc(-256px * 3) 0; }
+div#sprite.sp5 { background-position: calc(-256px * 4) 0; }
+div#sprite.sp6 { background-position: calc(-256px * 5) 0; }
+
+
+/* NUEVO SPRITE */
+
+div#red {
+
+    width: 300px;
+    height: 265px;
+    margin: 20px auto;
+
+   background-image: url(../src/imgs/red-sprite.png); /* el base64 completo */
+    background-repeat: no-repeat;
+
+    image-rendering: pixelated;
+}
+
+div#red.snp1 {
+    background-position: 0 0;
+}
+
+div#red.snp2 {
+    background-position: -64px 0;
+}
+
+div#red.snp3 {
+    background-position: -128px 0;
+}
+
+div#red.snp4 {
+    background-position: -192px 0;
+}
+
+</style>
+
+
+</style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button">
+    <span class="home-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </span>
+    <span class="home-text">Volver</span>
+</a>
+    <main>
+        <main>
+            <header>
+                <h1>23 - Sprite</h1>
+                <h2>This way we can include CSS within the style tag, it is very useful when you only have an html document.</h2>
+            </header>
+            <section>
+                <div class="recuadro">
+                   <div id="sprite" class="sp1"></div>
+                   <div id="red" class="snp1"></div>
+                </div>
+            </section>
+        </main>
+        <script>
+            const sprite = document.getElementById('sprite');
+            const numSprite = 6
+            let count = 1;
+            setInterval(() => {
+                sprite.className = '';
+                sprite.classList.add('sp' + count);
+                if(count === numSprite) count = 1;
+                else count++;
+            }, 80)
+
+        </script>
+
+            
+<script>
+
+const red = document.getElementById('red');
+
+const numRed = 4;
+
+let countRed = 1;
+
+setInterval(() => {
+
+    red.className = '';
+
+    red.classList.add('snp' + countRed);
+
+    if(countRed === numRed){
+        countRed = 1;
+    } else {
+        countRed++;
+    }
+
+}, 250);
+
+</script>
+
+</script>
+        
+</body>
+</html>

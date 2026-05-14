@@ -1,90 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14 - Background</title>
     <link rel="stylesheet" href="../03-css/style.css">
     <style>
-        /* Estilos para los ejemplos */
-        .bg-example {
-            border: 2px solid #333;
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #20088bb2;
-            border-radius: 8px;
+        /* Estilos minimos y neutros */
+        
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: white;
+            border: 1px solid #aaa;
+            border-radius: 20px;
+            padding: 0.3rem 1rem;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+        }
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #ccc;
+        }
+        header {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        h2, h3 {
+            font-weight: normal;
+            margin: 0.3rem 0;
+            font-size: 1rem;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+        .demo-block {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background: #fefefe;
+        }
+        .demo-title {
+            font-weight: bold;
+            font-family: monospace;
+            background: #eaeef2;
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        code {
+            background: #f1f1f1;
+            padding: 0.1rem 0.3rem;
+            font-family: monospace;
         }
         .demo-box {
             width: 100%;
-            height: 200px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-            background-color: #2716c28f; /* fallback */
+            height: 150px;
+            border: 1px solid #999;
+            margin: 10px 0;
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            color: #000;
+            background-color: #eaeef2;
             font-weight: bold;
-            text-shadow: 1px 1px 0 #fff;
+            color: #111;
         }
         .note {
             color: #555;
-            font-style: italic;
-            margin-top: 8px;
-            font-size: 0.9em;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
         }
-        hr {
-            margin: 30px 0;
-        }
-        /* Estilos específicos para el ejemplo de background-attachment */
-        .attachment-demo {
-            background-image: url('https://www.w3schools.com/css/img_tree.png');
+        /* attachment */
+        .attach-demo {
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #888;
+            margin: 10px 0;
+            padding: 10px;
+            background-image: url('skull.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            height: 300px;
-            overflow-y: auto;
-            border: 2px solid #aaa;
-            margin-bottom: 20px;
-            padding: 15px;
             color: white;
-            text-shadow: 1px 1px 0 black;
             font-weight: bold;
+            text-shadow: 1px 1px 0 black;
         }
-        .attachment-scroll {
+        .attach-scroll {
             background-attachment: scroll;
         }
-        .attachment-fixed {
+        .attach-fixed {
             background-attachment: fixed;
         }
-        .attachment-local {
+        .attach-local {
             background-attachment: local;
         }
-        .scroll-content {
+        .fake-text {
             background: rgba(0,0,0,0.6);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 150px;
-        }
-        .inline-note {
-            background: #f9f9f9;
             padding: 8px;
-            border-radius: 6px;
-            margin-top: 10px;
-            color: #000;
-            text-shadow: none;
+            margin-top: 120px;
         }
     </style>
 </head>
 <body>
     <a href="../03-css/index.html" class="home-button">
-        <span class="home-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </span>
-        <span class="home-text">Volver</span>
+        <span>← Volver</span>
     </a>
     <main>
         <header>
@@ -94,104 +126,103 @@
             <h2>- background-repeat</h2>
             <h2>- background-position</h2>
             <h2>- background-size</h2>
-            <h2>- background-attachment</h2> <!-- Agregado -->
+            <h2>- background-attachment</h2>
         </header>
-        
         <section>
-            <!-- Ejemplo 1: background-color -->
-            <div class="bg-example">
-                <h3>1. background-color</h3>
+
+            <!-- background-color -->
+            <div class="demo-block">
+                <div class="demo-title">background-color</div>
                 <div class="demo-box" style="background-color: lightblue; background-image: none;">
-                    Fondo sólido: lightblue
+                    Fondo solido: lightblue
                 </div>
-                <p class="note">✅ <code>background-color: lightblue;</code> - Define un color de fondo sólido.</p>
+                <div class="note">background-color: lightblue;</div>
             </div>
 
-            <!-- Ejemplo 2: background-image -->
-            <div class="bg-example">
-                <h3>2. background-image</h3>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: auto; background-position: left top;">
-                    Imagen de fondo (sin repetición)
+            <!-- background-image -->
+            <div class="demo-block">
+                <div class="demo-title">background-image</div>
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: left top; background-size: auto;">
+                    Imagen de fondo (sin repeticion)
                 </div>
-                <p class="note"> <code></code></p>
+                <div class="note">background-image: src=../images/skull.jpg;</div>
             </div>
 
-            <!-- Ejemplo 3: background-repeat -->
-            <div class="bg-example">
-                <h3>3. background-repeat</h3>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: repeat; background-size: 60px auto; background-color: #ccc;">
-                    repeat (repite horizontal y verticalmente)
+            <!-- background-repeat -->
+            <div class="demo-block">
+                <div class="demo-title">background-repeat</div>
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat; background-size: 60px auto; background-color: #ccc;">
+                    repeat (horizontal y vertical)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: repeat-x; background-size: 60px auto; margin-top: 10px;">
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat-x; background-size: 60px auto;">
                     repeat-x (solo horizontal)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: repeat-y; background-size: 60px auto; margin-top: 10px;">
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat-y; background-size: 60px auto;">
                     repeat-y (solo vertical)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: 60px auto; margin-top: 10px;">
-                    no-repeat (sin repetición)
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: 60px auto;">
+                    no-repeat (sin repeticion)
                 </div>
-                <p class="note">✅ <code>background-repeat: repeat | repeat-x | repeat-y | no-repeat;</code> - Controla cómo se repite la imagen.</p>
+                <div class="note">background-repeat: repeat | repeat-x | repeat-y | no-repeat;</div>
             </div>
 
-            <!-- Ejemplo 4: background-position -->
-            <div class="bg-example">
-                <h3>4. background-position</h3>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-position: left top;">
+            <!-- background-position -->
+            <div class="demo-block">
+                <div class="demo-title">background-position</div>
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: left top;">
                     left top
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-position: center center; margin-top: 10px;">
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: center center;">
                     center center
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-position: right bottom; margin-top: 10px;">
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: right bottom;">
                     right bottom
                 </div>
-                <p class="note">✅ <code>background-position: [pos-h] [pos-v];</code> - Ubica la imagen (ej: left top, center, 20px 50%).</p>
+                <div class="note">background-position: left top | center | right bottom, etc.</div>
             </div>
 
-            <!-- Ejemplo 5: background-size -->
-            <div class="bg-example">
-                <h3>5. background-size</h3>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: auto;">
+            <!-- background-size -->
+            <div class="demo-block">
+                <div class="demo-title">background-size</div>
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: auto;">
                     auto (tamaño original)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: cover; margin-top: 10px;">
-                    cover (cubre todo el área, puede recortar)
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: cover;">
+                    cover (cubre todo el area, puede recortar)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: contain; margin-top: 10px;">
-                    contain (ajusta sin recortar, puede dejar bordes)
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: contain;">
+                    contain (ajusta sin recortar, deja bordes)
                 </div>
-                <div class="demo-box" style="background-image: url('https://www.w3schools.com/css/img_tree.png'); background-repeat: no-repeat; background-size: 100px 80px; margin-top: 10px;">
+                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: 100px 80px;">
                     medidas fijas: 100px 80px
                 </div>
-                <p class="note">✅ <code>background-size: auto | cover | contain | [ancho] [alto];</code> - Controla el tamaño de la imagen de fondo.</p>
+                <div class="note">background-size: auto | cover | contain | ancho alto;</div>
             </div>
 
-            <!-- NUEVO Ejemplo 6: background-attachment -->
-            <div class="bg-example">
-                <h3>6. background-attachment</h3>
+            <!-- background-attachment -->
+            <div class="demo-block">
+                <div class="demo-title">background-attachment</div>
                 <p>Controla si la imagen de fondo se desplaza con el contenido o permanece fija.</p>
 
-                <h4>🔹 scroll (valor por defecto)</h4>
-                <div class="attachment-demo attachment-scroll">
-            
-                       
-                    </div>
+                <h4>scroll (por defecto)</h4>
+                <div class="attach-demo attach-scroll">
+                    <div class="fake-text">La imagen se desplaza con el scroll del elemento.</div>
                 </div>
 
-                <h4>🔸 fixed</h4>
-                <div class="attachment-demo attachment-fixed">
-                    
-                    </div>
+                <h4>fixed</h4>
+                <div class="attach-demo attach-fixed">
+                    <div class="fake-text">La imagen permanece fija en la ventana (no se mueve al hacer scroll).</div>
                 </div>
 
-                <h4>🔹 local</h4>
-                <div class="attachment-demo attachment-local">
-                    
+                <h4>local</h4>
+                <div class="attach-demo attach-local">
+                    <div class="fake-text">La imagen se desplaza con el contenido (incluyendo el scroll interno).</div>
                 </div>
-                <p class="note">✅ <code>background-attachment: scroll | fixed | local;</code> </p>
-                <p class="note">💡 <strong>Prueba:</strong> </p>
+
+                <div class="note">background-attachment: scroll | fixed | local;</div>
+                <div class="note">Prueba: Haz scroll dentro de cada caja para ver el comportamiento.</div>
             </div>
+
         </section>
     </main>
 </body>

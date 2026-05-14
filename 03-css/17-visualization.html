@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 - Visualization</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+    <style>
+        /* Estilos adicionales para la demostración visual, sin interferir con el CSS externo */
+        .recuadro {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Tarjetas de ejemplo */
+        .demo-card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9edf2;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        .demo-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        .card-header {
+            background: #f8fafc;
+            padding: 0.8rem 1.2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #e2edf2;
+            color: #0c4a6e;
+            font-family: monospace;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Estilos para ejemplos de display */
+        .display-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+        .display-item {
+            background: #eef2ff;
+            border-radius: 1rem;
+            padding: 0.8rem;
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+        }
+        .inline-demo span {
+            background: #fde68a;
+            padding: 0.2rem 0.6rem;
+            border-radius: 1rem;
+            margin: 0 0.2rem;
+        }
+        .none-demo .hidden-box {
+            display: none;
+        }
+        .flex-demo {
+            display: flex;
+            gap: 0.5rem;
+            background: #c7d2fe;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
+        }
+        .flex-demo div {
+            background: #4f46e5;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            flex: 1;
+        }
+        .grid-demo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            background: #a7f3d0;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 0.5rem;
+        }
+        .grid-demo div {
+            background: #059669;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        /* Visibility */
+        .visibility-box {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .vis-visible, .vis-hidden {
+            width: 100px;
+            height: 80px;
+            background: #fed7aa;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .vis-hidden {
+            visibility: hidden;
+            background: #f87171;
+        }
+
+        /* Overflow */
+        .overflow-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .overflow-box {
+            width: 160px;
+            height: 110px;
+            background: #fef9c3;
+            border: 1px solid #eab308;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+        }
+        .overflow-visible { overflow: visible; }
+        .overflow-hidden { overflow: hidden; }
+        .overflow-scroll { overflow: scroll; }
+        .overflow-auto { overflow: auto; }
+        .long-text {
+            width: 200px;
+            height: 90px;
+            background: #facc15;
+            margin-top: 0.4rem;
+        }
+
+        /* Z-index */
+        .zindex-playground {
+            position: relative;
+            height: 200px;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .z-block {
+            position: absolute;
+            width: 120px;
+            height: 100px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .z1 { background: #ef4444; top: 10px; left: 20px; z-index: 1; }
+        .z2 { background: #3b82f6; top: 50px; left: 60px; z-index: 2; }
+        .z3 { background: #10b981; top: 90px; left: 100px; z-index: 3; }
+        .z0 { background: #6b7280; top: 130px; left: 140px; z-index: 0; }
+
+        .note {
+            background: #f1f5f9;
+            padding: 0.6rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            border-left: 3px solid #3b82f6;
+        }
+        code {
+            background: #e2e8f0;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="home-button">
+        <span class="home-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+        <span class="home-text">Volver</span>
+    </a>
+    <main>
+        <header>
+            <h1>17 - Visualization</h1>
+            <h2>- Display: block|inline|none|flex|grid</h2>
+            <h3>- Visibility: visible|hidden</h3>
+            <h3>- Overflow: visible|hidden|scroll|auto</h3>
+            <h3>- Z-Index: 1...n</h3>
+        </header>
+        <section>
+            <div class="recuadro">
+                <!-- 1) DISPLAY -->
+                <div class="demo-card">
+                    <div class="card-header">📦 Display: block | inline | none | flex | grid</div>
+                    <div class="card-body">
+                        <div class="display-grid">
+                            <div class="display-item">
+                                <strong>block</strong><br>
+                                <div style="background:#bae6fd; margin-top:0.3rem; padding:0.2rem;">Ocupa todo el ancho</div>
+                                <div style="background:#bae6fd; margin-top:0.3rem; padding:0.2rem;">Salta de línea</div>
+                            </div>
+                            <div class="display-item">
+                                <strong>inline</strong><br>
+                                <div class="inline-demo">
+                                    <span>Uno</span> <span>Dos</span> <span>Tres</span>
+                                    <span style="display:inline; background:#fde047;">Inline</span>
+                                </div>
+                            </div>
+                            <div class="display-item">
+                                <strong>none</strong><br>
+                                <div class="none-demo">
+                                    <span style="color:#dc2626;">(Elemento oculto →)</span>
+                                    <div class="hidden-box" style="display:none;">No visible</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <strong>✨ Flexbox (display: flex)</strong>
+                            <div class="flex-demo">
+                                <div>1</div><div>2</div><div>3</div>
+                            </div>
+                        </div>
+                        <div style="margin-top:1rem;">
+                            <strong>✨ Grid (display: grid)</strong>
+                            <div class="grid-demo">
+                                <div>A</div><div>B</div><div>C</div><div>D</div>
+                            </div>
+                        </div>
+                        <div class="note">
+                            💡 <code>block</code> ocupa todo el ancho; <code>inline</code> se ajusta al contenido; <code>none</code> oculta y elimina espacio; <code>flex</code> y <code>grid</code> son layouts modernos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2) VISIBILITY -->
+                <div class="demo-card">
+                    <div class="card-header">👁️ Visibility: visible | hidden</div>
+                    <div class="card-body">
+                        <div class="visibility-box">
+                            <div class="vis-visible">visible ✅</div>
+                            <div class="vis-hidden">hidden (invisible)</div>
+                            <div style="background:#e2e8f0; padding:0.4rem; border-radius:0.8rem;">
+                                ➡️ El elemento con <code>visibility: hidden</code> <strong>sí ocupa espacio</strong> pero no se ve.
+                            </div>
+                        </div>
+                        <div class="note">
+                            📌 Diferencia clave: <code>visibility: hidden</code> mantiene el espacio en el layout. <code>display: none</code> lo elimina por completo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3) OVERFLOW -->
+                <div class="demo-card">
+                    <div class="card-header">📐 Overflow: visible | hidden | scroll | auto</div>
+                    <div class="card-body">
+                        <div class="overflow-group">
+                            <div class="overflow-box overflow-visible">
+                                <strong>visible</strong><br>
+                                <div class="long-text">Contenido largo que se desborda y se ve fuera (visible).</div>
+                            </div>
+                            <div class="overflow-box overflow-hidden">
+                                <strong>hidden</strong><br>
+                                <div class="long-text">El desbordamiento se recorta, no se ve lo que sale.</div>
+                            </div>
+                            <div class="overflow-box overflow-scroll">
+                                <strong>scroll</strong><br>
+                                <div class="long-text">Muestra barras siempre (horizontal y vertical).</div>
+                            </div>
+                            <div class="overflow-box overflow-auto">
+                                <strong>auto</strong><br>
+                                <div class="long-text">Solo agrega barras cuando es necesario.</div>
+                            </div>
+                        </div>
+                        <div class="note">
+                            🧹 <code>overflow: hidden</code> recorta el contenido sobrante. <code>scroll</code> siempre muestra barras. <code>auto</code> muestra barras solo si se necesita.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4) Z-INDEX -->
+                <div class="demo-card">
+                    <div class="card-header">📌 Z-Index: control de apilamiento (1 ... n)</div>
+                    <div class="card-body">
+                        <div class="zindex-playground">
+                            <div class="z-block z1">z-index: 1</div>
+                            <div class="z-block z2">z-index: 2</div>
+                            <div class="z-block z3">z-index: 3</div>
+                            <div class="z-block z0">z-index: 0</div>
+                        </div>
+                        <div class="note">
+                            🔼 Mayor <code>z-index</code> → más arriba en la pila. Solo funciona en elementos posicionados (relative, absolute, fixed, sticky).<br>
+                            En el ejemplo: verde (z:3) está encima del azul (z:2), rojo (z:1) y gris (z:0) quedan debajo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
