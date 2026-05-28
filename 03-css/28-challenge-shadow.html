@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 - Challenge Shadow</title>
+    <link rel="stylesheet" href="../03-css/style.css">
+    <style>
+        figure.frame {
+            background: #ffffff;
+            /* Ajustado a 79 columnas x 74 filas (cada celda 20px) */
+            width: calc(79 * 20px);
+            height: calc(74 * 20px);
+            margin: 2rem auto;
+            zoom: 0.60;
+            position: relative;
+        }
+        div.squares {
+            background: url(../src/imgs/square.png);
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        div.ben {
+            background-color: #ffffff;
+            height: 20px;
+            width: 20px;
+            position: relative;
+            z-index: 1;
+            /* Ejemplo de cuadrícula de 10x10 con box-shadow (100 sombras) */
+            /* Para 79x74 necesitarías 5846 sombras, genera con JS y pega */
+            box-shadow: 20px 0 0 0 #ffffff,
+                        40px 0 0 0 #ffffff,
+                        60px 0 0 0 #ffffff,
+                        80px 0 0 0 #ffffff,
+                        100px 0 0 0 #ffffff,
+                        120px 0 0 0 #ffffff,
+                        140px 0 0 0 #ffffff,
+                        160px 0 0 0 #ffffff,
+                        180px 0 0 0 #ffffff,
+                        400px 0 0 0 #002A6F,
+
+                        /* fila 2 */
+                        0px 20px 0 0 #ffffff,
+                        20px 20px 0 0 #ffffff,
+                        40px 20px 0 0 #ffffff,
+                        60px 20px 0 0 #ffffff,
+                        80px 20px 0 0 #ffffff,
+                        100px 20px 0 0 #ffffff,
+                        120px 20px 0 0 #ffffff,
+                        140px 20px 0 0 #ffffff,
+                        160px 20px 0 0 #ffffff,
+                        180px 20px 0 0 #ffffff,
+                        380px 20px 0 0 #002A6F,
+                        400px 20px 0 0 #002A6F,
+                        1020px 20px 0 0 #000000,
+                        1040px 20px 0 0 #000000,
+                        1060px 20px 0 0 #000000,
+                        /* fila 3 */
+                        0px 40px 0 0 #ffffff,
+                        20px 40px 0 0 #ffffff,
+                        40px 40px 0 0 #ffffff,
+                        60px 40px 0 0 #ffffff,
+                        80px 40px 0 0 #ffffff,
+                        100px 40px 0 0 #ffffff,
+                        120px 40px 0 0 #ffffff,
+                        140px 40px 0 0 #ffffff,
+                        160px 40px 0 0 #ffffff,
+                        180px 40px 0 0 #ffffff,
+                        380px 40px 0 0 #002A6F,
+                        400px 40px 0 0 #002A6F,
+                        400px 40px 0 0 #002A6F,
+                        980px 40px 0 0 #000000,
+                        1000px 40px 0 0 #000000,
+                        1020px 40px 0 0 #19222B,
+                        1040px 40px 0 0 #19222B,
+                        1060px 40px 0 0 #000000,
+
+
+                         /* fila 4 */
+                            380px 60px 0 0 #05DBF2,
+                            400px 60px 0 0 #002A6F,
+                            940px 60px 0 0 #000000,
+                            960px 60px 0 0 #000000,
+                            980px 60px 0 0 #19222B,
+                            1000px 60px 0 0 #19222B,
+                            1020px 60px 0 0 #19222B,
+                            1040px 60px 0 0 #000000,
+
+                         /* fila 5 */
+                         900px 80px 0 0 #000000,
+                         920px 80px 0 0 #000000,
+                         940px 80px 0 0 #19222B,
+                         960px 80px 0 0 #19222B,
+                         980px 80px 0 0 #19222B,
+                         1000px 80px 0 0 #19222B,
+                         1020px 80px 0 0 #000000,
+
+                         /*fila 6 */
+                         
+                        860px 100px 0 0 #000000
+
+
+                         
+
+
+
+    
+        }
+    </style>
+</head>
+<body>
+    <main class="document-page"> 
+        <a href="../03-css/index.html" class="home-button">
+            <span class="home-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="home-text">Volver</span>
+        </a>      
+        <header>
+            <h1>28 - Challenge Shadow</h1>
+            <h2>Pixel Art (AshGreninja).</h2>
+        </header>
+        <section>
+            <figure class="frame">
+                <div class="ben"></div>
+                <div class="squares"></div>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
