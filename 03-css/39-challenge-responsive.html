@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-size: 100px;
+    
+        }
+        main {
+            background: url(../src/imgs/fondosouth.jpg);
+            margin: 0 auto;
+        }
+
+        /* ── LOGO ── */
+        div.logo {
+            background: url(../src/imgs/South_Park_sign_logo.png);
+            background-size: 150px;
+            height: 120px;
+            margin: 1rem auto;
+            width: 180px;
+            background-repeat: no-repeat;
+        }
+
+        /* ── INFO SECTION ── */
+        section.info {
+            background-color: #00000048;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            
+        }
+
+        .info-logo {
+            background-position: -285px -495px;
+            background-size: 800px auto;
+            width: 90px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 200px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.92rem;
+            color: #222;
+            line-height: 1.65;
+            text-align: justify;
+            transition: color 0.2s ease;
+        }
+
+        .info-text:hover {
+            color: #17a053;
+        }
+
+       
+
+        /*Segundo párrafo*/
+        
+
+         section.info1 {
+            background-color: #00000048;
+            padding: 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border-top: 8px solid #ffffff;
+        }
+        .info-logo1 {
+            background-size: 120px auto;
+            width: 120px;
+            height: 185px;
+        }
+
+        .info-text1 {
+            flex: 1;
+            min-width: 200px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.92rem;
+            color: #222;
+            line-height: 1.65;
+            text-align: justify;
+            transition: color 0.2s ease;
+        }
+
+        .info-text1:hover {
+            color: #17a053;
+        }
+
+        /* Efecto hover desde tarjetas (se mantiene) */
+        body:has(.product-card:hover) .info-text:not(:hover) {
+            color: #0a0a0a;
+        }
+   
+        /*  otro ensayo */
+
+        /* 1. CONTENEDOR PADRE: Alinea las tarjetas al inicio de la página y una al lado de la otra */
+        .grid-tarjetas {
+         justify-content: center;
+         display: flex;
+        flex-direction: row;       /* Las fuerza a ponerse una al lado de la otra */
+        align-items: flex-start;   /* Evita que se estiren verticalmente de forma rara */
+        gap: 15px;                 /* Espacio de separación entre cada recuadro */
+        padding: 20px;             /* Margen interno respecto a los bordes de la pantalla */
+        }
+
+/* 2. LA TARJETA: Se sigue adaptando a lo que mida la imagen por dentro */
+.card-container {
+  display: flex;
+  width: fit-content; 
+  background-color: #000;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.column-left {
+  position: relative;
+  display: flex;
+}
+
+/* 3. EL TRUCO DEL TAMAÑO: Aquí controlamos qué tan pequeños se ven los recuadros */
+.column-left img {
+  display: block;
+  width: 120px;              /* Reducimos el ancho de la imagen (ajusta este número si los quieres aún más pequeños) */
+  height: auto;              /* Mantiene la proporción de la imagen para que no se deforme */
+}
+
+/* 4. TEXTO SUPERIOR: Se adapta al nuevo tamaño pequeño */
+     .header-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 6px 10px;         /* Un padding un poco más pequeño para que no sature */
+     background-color: rgba(255, 255, 255, 0.4);
+     box-sizing: border-box;
+     font-weight: bold;
+     color: #000;
+     font-size: 0.9rem;         /* Letra un poco más pequeña acorde al nuevo tamaño */
+     }
+
+     /* 5. BLOQUE VERDE: Reducimos su ancho para mantener la armonía */
+      .column-right {
+     background-color: #117a3b;
+     width: 60px;               /* Antes era 100px, lo bajamos a 60px para que vaya a juego con la imagen pequeña */
+    }
+
+    </style>
+    </head>
+     <body>
+     
+    <main>
+        <div class="logo"></div>
+
+        <div class="grid-tarjetas">
+
+  <div class="card-container">
+    <div class="column-left">
+      <div class="header-overlay">Cartman</div>
+      <img src="../src/imgs/cartman.png" alt="Cartman" class="info-logo">
+    </div>
+    <div class="column-right"></div>
+  </div>
+
+  <div class="card-container">
+    <div class="column-left">
+      <div class="header-overlay">Kyle</div>
+      <img src="../src/imgs/kyle.png" alt="Kyle" class="info-logo1">
+    </div>
+    <div class="column-right"></div>
+  </div>
+
+  <div class="card-container">
+    <div class="column-left">
+      <div class="header-overlay">Stan</div>
+      <img src="../src/imgs/stan.png" alt="Stan" class="info-logo1">
+    </div>
+    <div class="column-right"></div>
+  </div>
+
+  <div class="card-container">
+    <div class="column-left">
+      <div class="header-overlay">Kenny</div>
+      <img src="../src/imgs/kenny.png" alt="Kenny" class="info-logo1">
+    </div>
+    <div class="column-right"></div>
+  </div>
+  </div>
+        <section class="info">
+            <div class="info-logo"></div>
+            <div class="info-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+            </div>
+            <div class="info-can"></div>
+        </section>
+
+         <section class="info1">
+            <div class="info-logo1"></div>
+            <img src="../src/imgs/kyle.png" alt="Kyle" class="info-logo1">
+            <div class="info-text1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+            </div>
+            <div class="info-can1"></div>
+        </section>
+
+    </main>
+</body>
+</html>

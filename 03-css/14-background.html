@@ -6,30 +6,14 @@
     <title>14 - Background</title>
     <link rel="stylesheet" href="../03-css/style.css">
     <style>
-        /* Estilos minimos y neutros */
+ 
         
-        .home-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: white;
-            border: 1px solid #aaa;
-            border-radius: 20px;
-            padding: 0.3rem 1rem;
-            margin-bottom: 1.5rem;
-            text-decoration: none;
-            color: black;
-            font-size: 0.9rem;
-        }
         main {
             max-width: 1000px;
             margin: 0 auto;
-            background: white;
             padding: 1.5rem;
-            border: 1px solid #ccc;
         }
         header {
-            border-bottom: 1px solid #ddd;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
         }
@@ -48,18 +32,18 @@
             gap: 1.8rem;
         }
         .demo-block {
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff;
             padding: 1rem;
-            background: #fefefe;
+            text-shadow: 1px 1px 0 black;
         }
         .demo-title {
             font-weight: bold;
             font-family: monospace;
-            background: #eaeef2;
             display: inline-block;
             padding: 0.2rem 0.6rem;
             margin-bottom: 1rem;
             font-size: 0.9rem;
+            text-shadow: 1px 1px 0 black;
         }
         code {
             background: #f1f1f1;
@@ -69,19 +53,20 @@
         .demo-box {
             width: 100%;
             height: 150px;
-            border: 1px solid #999;
             margin: 10px 0;
             display: flex;
             align-items: flex-end;
             justify-content: center;
-            background-color: #eaeef2;
             font-weight: bold;
             color: #111;
+            text-shadow: 1px 1px 0 black;
+              color: white;
         }
         .note {
-            color: #555;
+            color: #ffffff;
             font-size: 0.85rem;
             margin-top: 0.5rem;
+            text-shadow: 1px 1px 0 black;
         }
         /* attachment */
         .attach-demo {
@@ -90,7 +75,7 @@
             border: 1px solid #888;
             margin: 10px 0;
             padding: 10px;
-            background-image: url('skull.jpg');
+            background-image: url(../src/imgs/skulls.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -107,17 +92,18 @@
         .attach-local {
             background-attachment: local;
         }
-        .fake-text {
-            background: rgba(0,0,0,0.6);
-            padding: 8px;
-            margin-top: 120px;
-        }
+        
     </style>
 </head>
 <body>
     <a href="../03-css/index.html" class="home-button">
-        <span>← Volver</span>
-    </a>
+    <span class="home-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </span>
+    <span class="home-text">Volver</span>
+</a>
     <main>
         <header>
             <h1>14 - Background</h1>
@@ -133,7 +119,7 @@
             <!-- background-color -->
             <div class="demo-block">
                 <div class="demo-title">background-color</div>
-                <div class="demo-box" style="background-color: lightblue; background-image: none;">
+                <div class="demo-box" style="background-color: rgb(47, 184, 230); background-image: none;">
                     Fondo solido: lightblue
                 </div>
                 <div class="note">background-color: lightblue;</div>
@@ -142,25 +128,24 @@
             <!-- background-image -->
             <div class="demo-block">
                 <div class="demo-title">background-image</div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: left top; background-size: auto;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-position: left top; background-size: auto;">
                     Imagen de fondo (sin repeticion)
                 </div>
-                <div class="note">background-image: src=../images/skull.jpg;</div>
             </div>
 
             <!-- background-repeat -->
             <div class="demo-block">
                 <div class="demo-title">background-repeat</div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat; background-size: 60px auto; background-color: #ccc;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: repeat; background-size: 60px auto; background-color: #ccc;">
                     repeat (horizontal y vertical)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat-x; background-size: 60px auto;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: repeat-x; background-size: 60px auto;">
                     repeat-x (solo horizontal)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: repeat-y; background-size: 60px auto;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: repeat-y; background-size: 60px auto;">
                     repeat-y (solo vertical)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: 60px auto;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-size: 60px auto;">
                     no-repeat (sin repeticion)
                 </div>
                 <div class="note">background-repeat: repeat | repeat-x | repeat-y | no-repeat;</div>
@@ -169,13 +154,13 @@
             <!-- background-position -->
             <div class="demo-block">
                 <div class="demo-title">background-position</div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: left top;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-position: left top;">
                     left top
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: center center;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-position: center center;">
                     center center
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-position: right bottom;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-position: right bottom;">
                     right bottom
                 </div>
                 <div class="note">background-position: left top | center | right bottom, etc.</div>
@@ -184,16 +169,16 @@
             <!-- background-size -->
             <div class="demo-block">
                 <div class="demo-title">background-size</div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: auto;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-size: auto;">
                     auto (tamaño original)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: cover;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-size: cover;">
                     cover (cubre todo el area, puede recortar)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: contain;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-size: contain;">
                     contain (ajusta sin recortar, deja bordes)
                 </div>
-                <div class="demo-box" style="background-image: url('skull.jpg'); background-repeat: no-repeat; background-size: 100px 80px;">
+                <div class="demo-box" style="background-image: url(../src/imgs/skulls.jpg); background-repeat: no-repeat; background-size: 100px 80px;">
                     medidas fijas: 100px 80px
                 </div>
                 <div class="note">background-size: auto | cover | contain | ancho alto;</div>
@@ -218,11 +203,7 @@
                 <div class="attach-demo attach-local">
                     <div class="fake-text">La imagen se desplaza con el contenido (incluyendo el scroll interno).</div>
                 </div>
-
-                <div class="note">background-attachment: scroll | fixed | local;</div>
-                <div class="note">Prueba: Haz scroll dentro de cada caja para ver el comportamiento.</div>
             </div>
-
         </section>
     </main>
 </body>
