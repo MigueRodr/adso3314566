@@ -6,7 +6,6 @@
     <title>South Park</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
-        /* ─── RESET Y BASE ─── */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +22,7 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        /* ─── LOGO ─── */
+        /* ─── letrero de south park ─── */
         .logo {
             background: url(../src/imgs/South_Park_sign_logo.png) no-repeat center;
             background-size: 150px;
@@ -57,10 +56,8 @@
 
         .card-container:hover {
             transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
 
-        /* Contenedor de la imagen */
         .column-left {
             position: relative;
             display: flex;
@@ -72,17 +69,16 @@
             height: auto;
         }
 
-        /* ─── RECUADRO INFERIOR (nombre) ─── */
         .bottom-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            padding: 12px 16px;            /* Similar a los recuadros de info */
+            padding: 12px 16px;         
             background-color: rgba(0, 0, 0, 0.85);
             color: #fff;
             font-weight: 700;
-            font-size: 1.1rem;             /* Un poco más grande */
+            font-size: 1.1rem;            
             text-align: center;
             letter-spacing: 0.5px;
             border-bottom-left-radius: 12px;
@@ -91,12 +87,11 @@
             transform: translateY(0);
         }
 
-        /* Animación al hacer hover: el recuadro sube */
         .card-container:hover .bottom-overlay {
-            transform: translateY(-10px);
+            transform: translateY(-20px);
         }
 
-        /* ─── SECCIONES DE INFORMACIÓN ─── */
+      
         section.info,
         section.info1,
         section.info2,
@@ -109,8 +104,8 @@
             display: flex;
             align-items: center;
             gap: 2rem;
-            border-radius: 12px;           /* Redondeado como las tarjetas */
-            backdrop-filter: blur(2px);     /* Efecto transparentoso del reacudro de información */
+            border-radius: 12px;         
+            backdrop-filter: blur(2px);     
         }
 
         .info-logo,
@@ -141,20 +136,20 @@
             color: #17a053;
         }
 
-        /* ─── RESPONSIVE ─── */
+        /* ─── RESPONSIVE con puntos de quiebre ─── */
 
-        /* 1️ TABLET (2 tarjetas por fila) */
+        /*  Tablet (2 tarjetas por fila) */
         @media screen and (max-width: 1023px) and (min-width: 768px) {
             .grid-tarjetas {
-                gap: 30px;                 /* Reducimos separación */
+                gap: 30px;                
                 justify-content: center;
             }
 
             .card-container {
-                flex: 0 0 calc(50% - 30px); /* Ocupa la mitad menos el gap */
+                flex: 0 0 calc(50% - 30px); 
                 max-width: calc(50% - 30px);
-                width: auto;               /* Anula el ancho fijo de 180px */
-                min-width: 160px;          /* Para que no se encoja demasiado */
+                width: auto;               
+                min-width: 160px;          
             }
 
             .column-left img {
@@ -163,7 +158,7 @@
             }
         }
 
-        /* Celular (1 tarjeta por fila) */
+        /* Celular solo se ve una tarjeta */
         @media screen and (max-width: 767px) {
             .grid-tarjetas {
                 flex-direction: column;
@@ -173,8 +168,8 @@
             }
 
             .card-container {
-                width: 200px;              /* Tamaño cómodo para móvil */
-                flex: 0 0 auto;            /* Resetea el flex */
+                width: 200px;            
+                flex: 0 0 auto;          
                 max-width: 200px;
             }
 
@@ -183,7 +178,7 @@
                 height: auto;
             }
 
-            /* Reorganizar secciones de información en móvil */
+
             section.info,
             section.info1,
             section.info2,
@@ -245,7 +240,6 @@
             </div>
         </div>
 
-        <!-- SECCIONES DE INFORMACIÓN -->
         <section class="info">
             <img src="../src/imgs/cartman.png" alt="Cartman" class="info-logo" />
             <div class="info-text">
