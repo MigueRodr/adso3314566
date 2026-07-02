@@ -1,219 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>South Park</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
+        /* ─── RESET Y BASE ─── */
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
         body {
-            background-size: 100px;
-    
+            background-image: url('../src/imgs/fondosouth.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
         }
-        main {
-            background: url(../src/imgs/fondosouth.jpg);
+
+        /* ─── LOGO ─── */
+        .logo {
+            background: url(../src/imgs/South_Park_sign_logo.png) no-repeat center;
+            background-size: 150px;
+            height: 120px;
+            width: 180px;
+            margin: 1rem auto;
+        }
+
+        /* ─── CONTENEDOR DE TARJETAS ─── */
+        .grid-tarjetas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 94px;
+            padding: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* ── LOGO ── */
-        div.logo {
-            background: url(../src/imgs/South_Park_sign_logo.png);
-            background-size: 150px;
-            height: 120px;
-            margin: 1rem auto;
-            width: 180px;
-            background-repeat: no-repeat;
+        /* ─── CADA TARJETA ─── */
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            width: 180px;             
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
-        /* ── INFO SECTION ── */
-        section.info {
-            background-color: #00000048;
-            padding: 1.5rem 1rem;
+        .card-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Contenedor de la imagen */
+        .column-left {
+            position: relative;
+            display: flex;
+        }
+
+        .column-left img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ─── RECUADRO INFERIOR (nombre) ─── */
+        .bottom-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 16px;            /* Similar a los recuadros de info */
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;             /* Un poco más grande */
+            text-align: center;
+            letter-spacing: 0.5px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            transition: transform 0.25s ease;
+            transform: translateY(0);
+        }
+
+        /* Animación al hacer hover: el recuadro sube */
+        .card-container:hover .bottom-overlay {
+            transform: translateY(-10px);
+        }
+
+        /* ─── SECCIONES DE INFORMACIÓN ─── */
+        section.info,
+        section.info1,
+        section.info2,
+        section.info3 {
+            background-color: rgba(3, 3, 3, 0.21);
+            max-width: 1000px;
+            width: 90%;
+            margin: 0 auto 1.5rem auto;
+            padding: 2rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            
+            gap: 2rem;
+            border-radius: 12px;           /* Redondeado como las tarjetas */
+            backdrop-filter: blur(2px);     /* Efecto transparentoso del reacudro de información */
         }
 
-        .info-logo {
-            background-position: -285px -495px;
-            background-size: 800px auto;
-            width: 90px;
-            height: 90px;
-            flex-shrink: 0;
-        }
-
-        .info-text {
-            flex: 1;
-            min-width: 200px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.92rem;
-            color: #222;
-            line-height: 1.65;
-            text-align: justify;
-            transition: color 0.2s ease;
-        }
-
-        .info-text:hover {
-            color: #17a053;
-        }
-
-       
-
-        /*Segundo párrafo*/
-        
-
-         section.info1 {
-            background-color: #00000048;
-            padding: 1.5rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            border-top: 8px solid #ffffff;
-        }
-        .info-logo1 {
-            background-size: 120px auto;
-            width: 120px;
+        .info-logo,
+        .info-logo1,
+        .info-logo2,
+        .info-logo3 {
+            width: auto;
             height: 185px;
         }
 
-        .info-text1 {
+        .info-text,
+        .info-text1,
+        .info-text2,
+        .info-text3 {
             flex: 1;
             min-width: 200px;
-            font-family: 'Roboto', sans-serif;
             font-size: 0.92rem;
-            color: #222;
+            color: #ffffff;
             line-height: 1.65;
             text-align: justify;
             transition: color 0.2s ease;
         }
 
-        .info-text1:hover {
+        .info-text:hover,
+        .info-text1:hover,
+        .info-text2:hover,
+        .info-text3:hover {
             color: #17a053;
         }
 
-        /* Efecto hover desde tarjetas (se mantiene) */
-        body:has(.product-card:hover) .info-text:not(:hover) {
-            color: #0a0a0a;
+        /* ─── RESPONSIVE ─── */
+
+        /* 1️ TABLET (2 tarjetas por fila) */
+        @media screen and (max-width: 1023px) and (min-width: 768px) {
+            .grid-tarjetas {
+                gap: 30px;                 /* Reducimos separación */
+                justify-content: center;
+            }
+
+            .card-container {
+                flex: 0 0 calc(50% - 30px); /* Ocupa la mitad menos el gap */
+                max-width: calc(50% - 30px);
+                width: auto;               /* Anula el ancho fijo de 180px */
+                min-width: 160px;          /* Para que no se encoja demasiado */
+            }
+
+            .column-left img {
+                width: 100%;
+                height: auto;
+            }
         }
-   
-        /*  otro ensayo */
 
-        /* 1. CONTENEDOR PADRE: Alinea las tarjetas al inicio de la página y una al lado de la otra */
-        .grid-tarjetas {
-         justify-content: center;
-         display: flex;
-        flex-direction: row;       /* Las fuerza a ponerse una al lado de la otra */
-        align-items: flex-start;   /* Evita que se estiren verticalmente de forma rara */
-        gap: 15px;                 /* Espacio de separación entre cada recuadro */
-        padding: 20px;             /* Margen interno respecto a los bordes de la pantalla */
+        /* Celular (1 tarjeta por fila) */
+        @media screen and (max-width: 767px) {
+            .grid-tarjetas {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding: 15px;
+            }
+
+            .card-container {
+                width: 200px;              /* Tamaño cómodo para móvil */
+                flex: 0 0 auto;            /* Resetea el flex */
+                max-width: 200px;
+            }
+
+            .column-left img {
+                width: 100%;
+                height: auto;
+            }
+
+            /* Reorganizar secciones de información en móvil */
+            section.info,
+            section.info1,
+            section.info2,
+            section.info3 {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+
+            .info-logo,
+            .info-logo1,
+            .info-logo2,
+            .info-logo3 {
+                height: 150px;
+            }
+
+            .info-text,
+            .info-text1,
+            .info-text2,
+            .info-text3 {
+                min-width: unset;
+                text-align: center;
+            }
         }
 
-/* 2. LA TARJETA: Se sigue adaptando a lo que mida la imagen por dentro */
-.card-container {
-  display: flex;
-  width: fit-content; 
-  background-color: #000;
-  font-family: sans-serif;
-  overflow: hidden;
-}
-
-.column-left {
-  position: relative;
-  display: flex;
-}
-
-/* 3. EL TRUCO DEL TAMAÑO: Aquí controlamos qué tan pequeños se ven los recuadros */
-.column-left img {
-  display: block;
-  width: 120px;              /* Reducimos el ancho de la imagen (ajusta este número si los quieres aún más pequeños) */
-  height: auto;              /* Mantiene la proporción de la imagen para que no se deforme */
-}
-
-/* 4. TEXTO SUPERIOR: Se adapta al nuevo tamaño pequeño */
-     .header-overlay {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     padding: 6px 10px;         /* Un padding un poco más pequeño para que no sature */
-     background-color: rgba(255, 255, 255, 0.4);
-     box-sizing: border-box;
-     font-weight: bold;
-     color: #000;
-     font-size: 0.9rem;         /* Letra un poco más pequeña acorde al nuevo tamaño */
-     }
-
-     /* 5. BLOQUE VERDE: Reducimos su ancho para mantener la armonía */
-      .column-right {
-     background-color: #117a3b;
-     width: 60px;               /* Antes era 100px, lo bajamos a 60px para que vaya a juego con la imagen pequeña */
-    }
-
+        
     </style>
-    </head>
-     <body>
-     
+</head>
+<body>
     <main>
         <div class="logo"></div>
 
+        <!-- TARJETAS -->
         <div class="grid-tarjetas">
+            <div class="card-container">
+                <div class="column-left">
+                    <img src="../src/imgs/cartman.png" alt="Cartman" />
+                    <div class="bottom-overlay">Cartman</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="column-left">
+                    <img src="../src/imgs/kyle.png" alt="Kyle" />
+                    <div class="bottom-overlay">Kyle</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="column-left">
+                    <img src="../src/imgs/stan.png" alt="Stan" />
+                    <div class="bottom-overlay">Stan</div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="column-left">
+                    <img src="../src/imgs/kenny.png" alt="Kenny" />
+                    <div class="bottom-overlay">Kenny</div>
+                </div>
+            </div>
+        </div>
 
-  <div class="card-container">
-    <div class="column-left">
-      <div class="header-overlay">Cartman</div>
-      <img src="../src/imgs/cartman.png" alt="Cartman" class="info-logo">
-    </div>
-    <div class="column-right"></div>
-  </div>
-
-  <div class="card-container">
-    <div class="column-left">
-      <div class="header-overlay">Kyle</div>
-      <img src="../src/imgs/kyle.png" alt="Kyle" class="info-logo1">
-    </div>
-    <div class="column-right"></div>
-  </div>
-
-  <div class="card-container">
-    <div class="column-left">
-      <div class="header-overlay">Stan</div>
-      <img src="../src/imgs/stan.png" alt="Stan" class="info-logo1">
-    </div>
-    <div class="column-right"></div>
-  </div>
-
-  <div class="card-container">
-    <div class="column-left">
-      <div class="header-overlay">Kenny</div>
-      <img src="../src/imgs/kenny.png" alt="Kenny" class="info-logo1">
-    </div>
-    <div class="column-right"></div>
-  </div>
-  </div>
+        <!-- SECCIONES DE INFORMACIÓN -->
         <section class="info">
-            <div class="info-logo"></div>
+            <img src="../src/imgs/cartman.png" alt="Cartman" class="info-logo" />
             <div class="info-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+                Eric Cartman es uno de los protagonistas de la serie animada South Park. Físicamente se caracteriza por su sobrepeso (el cual siempre niega diciendo: "¡No estoy gordo, estoy fuertecito!"), su característico gorro azul, chaqueta roja y guantes amarillos. Psicológicamente es manipulador, sociópata, racista, antisemita y profundamente egoísta.
             </div>
-            <div class="info-can"></div>
         </section>
 
-         <section class="info1">
-            <div class="info-logo1"></div>
-            <img src="../src/imgs/kyle.png" alt="Kyle" class="info-logo1">
+        <section class="info2">
+            <img src="../src/imgs/kyle.png" alt="Kyle" class="info-logo2" />
+            <div class="info-text2">
+                Kyle Broflovski es uno de los protagonistas de la serie South Park. Es un niño judío de 10 años conocido por su inteligencia, su fuerte brújula moral y su icónico gorro verde (ushanka). A menudo actúa como la "voz de la razón", pero lucha con la culpa, el moralismo y los constantes conflictos con su compañero Eric Cartman.
+            </div>
+        </section>
+
+        <section class="info3">
+            <img src="../src/imgs/stan.png" alt="Stan" class="info-logo3" />
+            <div class="info-text3">
+                Stan Marsh es uno de los cuatro protagonistas principales de South Park. Es un estudiante de cuarto grado conocido por ser el chico "normal" y sensato del grupo. Suele actuar como la brújula moral de la serie, expresando un profundo cinismo hacia las tonterías de los adultos.
+            </div>
+        </section>
+
+        <section class="info1">
+            <img src="../src/imgs/kenny.png" alt="Kenny" class="info-logo1" />
             <div class="info-text1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.
+                Kenny McCormick es uno de los cuatro protagonistas principales de South Park. Es un niño de cuarto grado reconocido por usar siempre una parka naranja que cubre casi todo su rostro, lo que hace que su voz suene incomprensible. Proviene de una familia sumamente pobre y disfuncional.
             </div>
-            <div class="info-can1"></div>
         </section>
-
     </main>
 </body>
 </html>
