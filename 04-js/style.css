@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* ==================== RECUADRO PARA UNIDADES ABSOLUTAS ==================== */
+.recuadro-unidades {
+    background: linear-gradient(145deg, rgba(200, 150, 50, 0.7), rgba(140, 90, 20, 0.85));
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 215, 100, 0.6);
+    border-radius: 24px;
+    padding: 30px 40px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 215, 100, 0.3) inset,
+        0 0 20px rgba(200, 150, 50, 0.4);
+    transition: all 0.3s ease;
+    list-style-position: inside;
+    color: #FFF8E7;
+    font-family: 'Inter', monospace;
+}
+
+.recuadro-unidades:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 230, 150, 0.9);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 2px rgba(255, 215, 100, 0.4) inset,
+        0 0 30px rgba(255, 215, 100, 0.5);
+}
+
+.recuadro-unidades li {
+    margin: 15px 0;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.recuadro-unidades li:hover {
+    background: rgba(255, 215, 100, 0.25);
+    transform: translateX(8px);
+    border-left: 3px solid #FFD764;
+}
+
+.section-unidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.header-unidades ul {
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    background: rgba(200, 150, 50, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 15px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 215, 100, 0.4);
+    list-style-position: inside;
+    color: #FFF8E7;
+}
+
+.header-unidades ul li {
+    margin: 8px 0;
+}
+
+/* ==================== CUERPO ==================== */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffaa00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23ffb100' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23ffb800' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%23ffbe00' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%23ffc500' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%23ffcc00' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%23cfb00d' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%23a39215' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%237b7319' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%2357541a' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23373716' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M10 10 L 90 10 L 90 90 L 10 90 Z' fill='none' stroke='%23D4A017' stroke-width='0.5'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==================== BOTONES ==================== */
+.home-button,
+.boton-volver {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(145deg, #D4A017, #8B6B1A);
+    border: 2px solid #FFD764;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #FFF8E7;
+    font-family: 'Segoe UI', 'Consolas', monospace;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.home-button:hover,
+.boton-volver:hover {
+    background: linear-gradient(145deg, #FFD764, #B8860B);
+    border-color: #FFF0B0;
+    color: #FFFFFF;
+    box-shadow: 0 6px 25px rgba(255, 215, 100, 0.5);
+    transform: scale(1.05) translateX(-5px);
+}
+
+.home-button:active,
+.boton-volver:active {
+    transform: scale(0.98);
+}
+
+.home-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 5px rgba(255, 215, 100, 0.5));
+}
+
+.home-text {
+    font-size: 1rem;
+    font-weight: 600;
+    border-left: 2px solid rgba(255, 215, 100, 0.5);
+    padding-left: 12px;
+}
+
+/* ==================== TÍTULOS Y TEXTO ==================== */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #FFF8E7 0%, #FFD764 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+h4.name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #FFF8E7;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+h4.name::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD764, #FFF0B0, transparent);
+    border-radius: 3px;
+}
+
+.profile-img {
+    border: 4px solid #FFD764;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 2px rgba(255, 215, 100, 0.3) inset;
+    transition: all 0.4s ease;
+    filter: grayscale(20%);
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(2deg);
+    border-color: #FFF0B0;
+    filter: grayscale(0%);
+    box-shadow: 
+        0 20px 40px rgba(255, 215, 100, 0.3),
+        0 0 0 3px rgba(255, 215, 100, 0.5) inset;
+}
+
+/* ==================== MENÚS ==================== */
+menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+menu a {
+    background: rgba(80, 50, 10, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 215, 100, 0.3);
+    border-radius: 16px;
+    padding: 8px 30px 8px 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        0 2px 5px rgba(255, 215, 100, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 100, 0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+menu a:hover::before {
+    left: 100%;
+}
+
+menu a:hover {
+    transform: translateX(12px) scale(1.02);
+    background: rgba(200, 150, 50, 0.8);
+    border-color: rgba(255, 215, 100, 0.6);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 215, 100, 0.4);
+}
+
+menu span {
+    background: linear-gradient(135deg, #8B6B1A, #4A3508);
+    color: #FFF8E7;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    margin-right: 20px;
+    box-shadow: 
+        0 4px 10px rgba(0, 0, 0, 0.4),
+        0 0 0 1px #D4A017 inset;
+    transition: all 0.3s ease;
+    border: 1px solid #FFD764;
+}
+
+menu a:hover span {
+    background: linear-gradient(135deg, #D4A017, #8B6B1A);
+    color: #FFFFFF;
+    transform: scale(1.05);
+    box-shadow: 
+        0 6px 15px rgba(255, 215, 100, 0.3),
+        0 0 0 2px rgba(255, 215, 100, 0.5) inset;
+}
+
+aside {
+    text-align: left;
+}
+
+aside h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #FFF0B0;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+menu a:hover aside h4 {
+    color: #FFFFFF;
+}
+
+aside small {
+    color: #FFD764;
+    font-size: 0.9rem;
+    font-weight: 300;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+menu a:hover aside small {
+    color: #FFF8E7;
+}
+
+menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FFD764);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+menu a:hover::after {
+    opacity: 1;
+}
+
+/* ==================== COLUMNAS DE MENÚ ==================== */
+.menus-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.menu-column {
+    flex: 1;
+    min-width: 350px;
+}
+
+.menu-column:first-child {
+    background: linear-gradient(145deg, rgba(200, 150, 50, 0.4), rgba(140, 90, 20, 0.6));
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 20px;
+    border: 1px solid rgba(255, 215, 100, 0.4);
+}
+
+.menu-column:last-child {
+    background: linear-gradient(145deg, rgba(180, 130, 40, 0.4), rgba(120, 80, 15, 0.6));
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    padding: 20px;
+    border: 1px solid rgba(255, 215, 100, 0.4);
+}
+
+.menu-column menu {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+.menu-column menu h3 {
+    text-align: center !important;
+    font-size: 1.6rem !important;
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid #FFD764 !important;
+    color: #FFF8E7;
+}
+
+/* ==================== RECUADRO PARA LISTAS DENTRO DE SECTION ==================== */
+section ul,
+section ol,
+section menu,
+section dl {
+    background: linear-gradient(145deg, rgba(200, 150, 50, 0.7), rgba(140, 90, 20, 0.85));
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 215, 100, 0.6);
+    border-radius: 24px;
+    padding: 30px 40px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 40px auto;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 215, 100, 0.3) inset,
+        0 0 20px rgba(200, 150, 50, 0.4);
+    transition: all 0.3s ease;
+    list-style-position: inside;
+    color: #FFF8E7;
+    font-family: 'Inter', monospace;
+}
+
+section ul:hover,
+section ol:hover,
+section menu:hover,
+section dl:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 230, 150, 0.9);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 2px rgba(255, 215, 100, 0.4) inset,
+        0 0 30px rgba(255, 215, 100, 0.5);
+}
+
+section ul li,
+section ol li,
+section menu li,
+section dl dd {
+    margin: 15px 0;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+section ul li:hover,
+section ol li:hover,
+section menu li:hover,
+section dl dd:hover {
+    background: rgba(255, 215, 100, 0.25);
+    transform: translateX(8px);
+    border-left: 3px solid #FFD764;
+}
+
+section dl dt {
+    font-weight: 700;
+    margin-top: 10px;
+    color: #FFD764;
+}
+
+/* ==================== HEADER (sin afectar) ==================== */
+header ul,
+header ol,
+header menu,
+header dl {
+    background: rgba(200, 150, 50, 0.3) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 215, 100, 0.3) !important;
+    border-radius: 16px !important;
+    padding: 15px 30px !important;
+    width: auto !important;
+    margin: 20px auto !important;
+    box-shadow: none !important;
+    transform: none !important;
+    display: inline-block !important;
+    list-style-position: inside !important;
+}
+
+header ul:hover,
+header ol:hover,
+header menu:hover,
+header dl:hover {
+    transform: none !important;
+    border-color: rgba(255, 215, 100, 0.3) !important;
+    box-shadow: none !important;
+}
+
+header ul li,
+header ol li,
+header menu li,
+header dl dd,
+header dl dt {
+    background: transparent !important;
+    padding: 8px 0 !important;
+    transform: none !important;
+    border-left: none !important;
+}
+
+header ul li:hover,
+header ol li:hover,
+header menu li:hover,
+header dl dd:hover,
+header dl dt:hover {
+    background: transparent !important;
+    transform: none !important;
+    border-left: none !important;
+}
+
+/* ==================== RECUADRO GENÉRICO ==================== */
+.recuadro {
+    background: rgba(140, 90, 20, 0.5);
+    border: 1px solid rgba(255, 215, 100, 0.3);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.3),
+        0 2px 5px rgba(255, 215, 100, 0.2);
+}
+
+.recuadro p {
+    font-size: 1.1rem;
+    color: #FFF8E7;
+    line-height: 1.6;
+}
+
+/* ==================== ANIMACIONES ==================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, .profile-img, h4.name, menu a {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+menu a:nth-child(1) { animation-delay: 0.1s; }
+menu a:nth-child(2) { animation-delay: 0.2s; }
+menu a:nth-child(3) { animation-delay: 0.3s; }
+menu a:nth-child(4) { animation-delay: 0.4s; }
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4A3508;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #D4A017, #8B6B1A);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #FFD764, #D4A017);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .menus-container {
+        flex-direction: column;
+    }
+    
+    .menu-column {
+        min-width: auto;
+    }
+    .menu-column {
+    max-height: 600px;         /* Ajusta según el alto deseado */
+    overflow-y: auto;          /* Scroll vertical si excede */
+    scrollbar-width: thin;     /* Para navegadores Firefox */
+}
+
+/* Personaliza el scroll (opcional) */
+.menu-column::-webkit-scrollbar {
+    width: 8px;
+}
+.menu-column::-webkit-scrollbar-track {
+    background: rgba(255, 215, 100, 0.2);
+    border-radius: 8px;
+}
+.menu-column::-webkit-scrollbar-thumb {
+    background: #D4A017;
+    border-radius: 8px;
+}
+.menu-column::-webkit-scrollbar-thumb:hover {
+    background: #FFD764;
+}
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h4.name {
+        font-size: 1.4rem;
+    }
+    
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    menu span {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        font-size: 1.2rem;
+        margin-right: 15px;
+    }
+    
+    aside h4 {
+        font-size: 1.2rem;
+    }
+
+    .home-button, .boton-volver {
+        padding: 10px 20px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .home-icon {
+        font-size: 1.4rem;
+    }
+
+    .home-text {
+        font-size: 0.85rem;
+    }
+}
