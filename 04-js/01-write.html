@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<script>
-    
-</script>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>01 - Write</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../04-js/css/style.css" />
+    <style>
+        
 
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .welcome {
+                font-size: 1.6rem;
+            }
+            .volver {
+                top: 15px;
+                left: 15px;
+                font-size: 1rem;
+                padding: 6px 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <a href="../04-js/index.html" class="home-button">
@@ -19,20 +37,18 @@
     </span>
     <span class="home-text">Volver</span>
 </a>
-    <main>
-        <main>
-            <header>
-                <h1>01 - Write</h1>
-                <h2> you only have an html document.</h2>
-            </header>
-            <section>
-                <div class="recuadro">
-                     <script>
-                        document.write('<h3>Welcome to JS</h3>');
-                     </script>
-                     <p id="message"
-                </div>
-            </section>
-        </main>
+    <!-- Contenido principal -->
+    <div class="recuadro">
+        <div class="js-icon">{ }</div>   <!-- ícono decorativo -->
+        <h1>01 - Write</h1>
+        <p class="welcome">Welcome to JS</p>
+        <p class="subtitulo">Solo tienes un documento HTML</p>
+    </div>
+
+    <!-- (Opcional) Código JavaScript de ejemplo -->
+    <script>
+        console.log("¡Página con estética JS cargada!");
+        // Puedes agregar aquí tu código de ejemplo
+    </script>
 </body>
 </html>
