@@ -19,6 +19,6 @@
 
 [ADSO Files DRIVE ](https://tinyurl.com/wnkk334u)
  
-[VERCEL URL](https://adso3314566-r8a1vhgu5-miguels-projects-8b1ad249.vercel.app)
+[VERCEL URL](https://adso3314566-miguels-projects-8b1ad249.vercel.app/)
 ## public repository ADSO 3314566
 
