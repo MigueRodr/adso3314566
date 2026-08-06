@@ -139,6 +139,7 @@
                 pkName.innerHTML = `${this.name} <small>(${this.type})</small>`;
                 pkImage.style.backgroundImage = `url(${this.image})`;
                 this.updateHp('animate__rubberBand');
+                this.updateButtons(); //cambia el estado de los botones
             },
 
             // Update HP and classes
@@ -157,16 +158,20 @@
                 pkImage.classList.add(this.status, fx);
             },
 
+                updateButtons: function () {
+                btnAttack.disabled = this.hp <= 0;
+            },
+
+
             // Feed
             feed: function () {
 
                 if (this.hp < 200) {
-
                     this.hp += 25;
                     this.status = 'feed';
-
                     this.updateHp('animate__rubberBand');
                     this.updateStatus();
+                    this.updateButtons(); //cambia el estado de los botones despues que cambia el hp
                 }
             },
 
@@ -180,6 +185,7 @@
                     if (this.hp <= 0) {
                         this.hp = 0;
                         this.status = 'dead';
+                        this.updateButtons(); //cambia el estado de los botones despues que cambia el hp
                     } else {
                         this.status = 'attack';
                     }
@@ -197,7 +203,6 @@
                 setTimeout(() => {
 
                     this.status = 'alive';
-
                     pkImage.classList.remove(
                         'attack',
                         'feed',
@@ -211,12 +216,14 @@
 
         };
 
-        // Events
+
         pokemon.render();
 
         // Events
         btnFeed.addEventListener('click', function () {
             pokemon.feed();
+
+            // Disable button for 2 seconds, because the animation takes 1.2 seconds, we give it a little more time to avoid clicking again before the animation ends.
             this.style.pointerEvents = 'none';
             this.style.opacity = '0.2';
             setTimeout(() => {
@@ -227,6 +234,8 @@
 
         btnAttack.addEventListener('click', function () {
             pokemon.attack();
+
+            // Disable button for 2 seconds, because the animation takes 1.2 seconds, we give it a little more time to avoid clicking again before the animation ends.
             this.style.pointerEvents = 'none';
             this.style.opacity = '0.2';
             setTimeout(() => {
